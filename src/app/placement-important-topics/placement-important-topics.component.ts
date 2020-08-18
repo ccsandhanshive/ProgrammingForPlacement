@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import {topics} from "./topicMockData"
 @Component({
   selector: 'app-placement-important-topics',
   templateUrl: './placement-important-topics.component.html',
@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class PlacementImportantTopicsComponent implements OnInit {
 
   constructor() { }
-
+  topics:any
   ngOnInit(): void {
+    this.topics=topics
   }
 
 }

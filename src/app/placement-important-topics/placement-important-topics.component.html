@@ -1,1 +1,15 @@
-<p>placement-important-topics works!</p>
+<div class="demotext">
+<table class="blueTable">
+    <thead>
+        <th>Topic Id</th>
+        <th>Topic Name</th>
+        <th></th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let t of topics">
+            <td>{{t.topicId}}</td>
+            <td>{{t.topicName}}</td>
+            <td><a class="myButton" [href]="t.topicLink" class="myButton">Launch cource</a></td>
+    </tbody>
+</table>
+</div>
