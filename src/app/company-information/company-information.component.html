@@ -1,2 +1,69 @@
-<p>company-information works!</p>
-
+<table style="margin: auto">
+    <tbody>
+        <td>
+<div class="demotext">
+    <table class="blueTable">
+      <thead>
+        <th>Company Id</th>
+        <th>Company Name</th>
+        <th></th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let c of companies">
+          <td>{{c.companyId}}</td>
+          <td>{{c.companyName}}</td>      
+         <td><app-company-details [id]='c.companyId' (company)='getCompanyDetails($event)'></app-company-details></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <br>
+  </td>
+  <td>
+  <br>
+  <div class="demotext">
+    <table class="blueTable" *ngIf="available">
+      <thead>
+        <th>Company details</th>
+      </thead>
+      <tbody style="margin: auto; text-align: center;">
+        <tr>
+            <td>Company Id</td>
+            <td>{{company.companyId}}</td>
+        </tr>
+        <tr>
+            <td>Image</td>
+            <td><img [src]="company.imageUrl"  width="200" height="200"/></td></tr>
+        <tr>
+            <td>Company Name</td>
+            <td>{{company.companyName}}</td>
+        </tr>
+        <tr>
+            <td>Package Per Anum In lakes</td>
+            <td>{{company.package}}</td>
+        </tr>
+        <tr>
+            <td>Eligible Passing Year</td>
+            <td>{{company.passingYear}}</td>
+        </tr>
+        <tr>
+            <td>Eligibal Branches</td>
+            <td>{{company.eligibalBranches}}</td>
+        </tr>
+        <tr>
+            <td>Job Description</td>
+            <td >
+                <ul *ngFor="let point of company.jobDescription">
+                    <li>{{point}}</li>
+                  </ul>
+            </td>
+        </tr>
+        <tr><td></td>
+            <td><a [href]="company.registrationLink" class="myButton">Apply now</a></td>
+        </tr>
+      </tbody>
+      </table>
+  </div>
+</td>
+</tbody>
+</table>
