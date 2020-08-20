@@ -1,1 +1,34 @@
-<p>programming-window works!</p>
+<div *ngIf="!back">
+<table class="blueTable">
+    <tbody>
+        <td>
+            <table class="blueTable" >
+                <tbody >
+                    <tr>Title</tr>
+                    <tr>{{problem.problemTitle}}</tr>
+                    <tr>Problem Statement</tr>
+                    <tr>{{problem.problemStatement}}</tr>
+                    <tr>Input</tr>
+                    <tr>{{problem.input}}</tr> 
+                    <tr>Output</tr>
+                    <tr>{{problem.output}}</tr>     
+                    <tr>Description</tr>
+                    <tr>{{problem.description}}</tr> 
+                    <tr>
+                        <a class="myButton" [href]="compilarLink" class="myButton">Solve</a>&nbsp;
+                        <button class="myButton"(click)="setProgramVisibility()">Show Program</button>
+                        <button class="myButton"(click)="setBack()">Back</button>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+        <td *ngIf="programVisibility">
+            <textarea cols="60"  rows="20">{{problem.program}}</textarea>
+            
+        </td>
+    </tbody>
+</table>
+</div>
+<div *ngIf="back">
+    <app-problem-statements></app-problem-statements>
+</div>
