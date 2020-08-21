@@ -15,6 +15,8 @@ import { PlacementImportantTopicsComponent } from './placement-important-topics/
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; 
 import { ReactiveFormsModule } from '@angular/forms';
+import { RegisterUserComponent } from './register-user/register-user.component';
+import {UsersService} from './shared/users.service'
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CompanyInformationComponent,
     CompanyDetailsComponent,
     WebinarAdsComponent,
-    PlacementImportantTopicsComponent
+    PlacementImportantTopicsComponent,
+    RegisterUserComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +41,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
