@@ -1,24 +1,21 @@
-<table style="margin: auto">
-    <tbody>
-        <td>
-<div class="demotext">
-    <table class="blueTable">
-      <thead>
-        <th>Problem Id</th>
-        <th>Problem Name</th>
-        <th></th>
-      </thead>
-      <tbody>
-        <tr *ngFor="let p of problems">
-          <td>{{p.problemId}}</td>
-          <td>{{p.problemTitle}}</td>      
-         <td><button class="myButton">Launch</button>
-         </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <br>
-  </td>
+<div *ngIf="!Ava">
+<table class="blueTable">
+  <thead>
+    <th>Problem Id</th>
+    <th>Problem Name</th>
+  </thead>
+  <tbody>
+      <tr *ngFor="let p of problems">
+        <td>{{p.problemId}}</td>
+        <td>{{p.problemTitle}}</td>      
+        <td><button class="myButton" (click)="setId(p.problemId)">More</button></td>
+      </tr>
   </tbody>
-</table>  
+</table>
+</div>
+<div *ngIf="Ava">
+   <app-programming-window  [problem]="problem" ></app-programming-window>  
+  </div>
+
+
+
