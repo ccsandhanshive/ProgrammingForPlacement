@@ -1,4 +1,5 @@
-{ "proxy": "http://localhost:3000",
+{
+  "proxy": "http://localhost:3000",
   "name": "backendapplication",
   "version": "1.0.0",
   "description": "backend application",
@@ -16,6 +17,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "mongodb": "^3.6.0",
     "mongoose": "^5.9.27"
   }
 }

@@ -8,6 +8,10 @@ import {WebinarAdsComponent} from './webinar-ads/webinar-ads.component'
 import {LoginComponent} from './login/login.component'
 import {AppComponent} from './app.component'
 const routes: Routes = [
+  // {
+  //   path:'',
+  //   component:CompanyDetailsComponent  
+  // },
   {
     path:'ProblemStatementsComponent',
     component:ProblemStatementsComponent

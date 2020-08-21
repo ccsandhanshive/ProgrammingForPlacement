@@ -1,0 +1,18 @@
+{
+  "User": [
+    {
+      "id": 1,
+      "firstname": "swapnil",
+      "lastname": "Borase",
+      "email": "sb@gmail.com",
+      "password": "sb123"
+    },
+    {
+      "id": 2,
+      "firstname": "chetan",
+      "lastname": "sandhanshive",
+      "email": "cs@gmail.com",
+      "password": "cs123"
+    }
+  ]
+}
