@@ -4,7 +4,7 @@ export interface WebinarData{
     registerLink:String,
     price:String,
     information:String,
-    imageURL:string,
+    imageURL:String,
 
    
 }

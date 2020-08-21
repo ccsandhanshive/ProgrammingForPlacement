@@ -3,8 +3,9 @@ const mongoose=require("mongoose");
 const db={};
 db.mongoose=mongoose;
 db.url=dbConfig.url;
-db.companies=require("./company.model.js")(mongoose)
-db.topics=require("./topic.model.js")(mongoose)
+db.companies=require("./company.model")(mongoose)
+db.topics=require("./topic.model")(mongoose)
 db.problems=require("./problem.model")(mongoose)
-
+db.webads=require("./webad.model")(mongoose)
+db.placementTips=require("./placementTips.model")(mongoose)
 module.exports=db;
