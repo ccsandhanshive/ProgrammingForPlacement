@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {CompanyDetailsComponent} from './company-details/company-details.component'
 import { LoginComponent } from './login/login.component';
 import { LogUpComponent } from './log-up/log-up.component';
 import { AppComponent } from './app.component';
@@ -12,11 +11,15 @@ import {PlacementTipsComponent} from './placement-tips/placement-tips.component'
 import {CompanyInformationComponent} from './company-information/company-information.component'
 import {WebinarAdsComponent} from './webinar-ads/webinar-ads.component'
 
+
+import {CompanyDetailsAdminComponent} from './company-details-admin/company-details-admin.component'
+import {PlacementImportantTopicsAdminComponent} from './placement-important-topics-admin/placement-important-topics-admin.component'
+import {PlacementTipsAdminComponent} from './placement-tips-admin/placement-tips-admin.component'
+import { ProblemStatementAdminComponent } from './problem-statement-admin/problem-statement-admin.component'
+import {WebinarAdsAdminComponent} from './webinar-ads-admin/webinar-ads-admin.component'
+
 const routes: Routes = [
-  // {
-  //   path:'',
-  //   component:CompanyDetailsComponent  
-  // },
+ 
   {
     path:'ProblemStatementsComponent',
     component:ProblemStatementsComponent
@@ -48,6 +51,26 @@ const routes: Routes = [
   {
     path:'home',
     component:AppComponent
+  },
+  {
+    path:'CompanyDetailsAdminComponent',
+    component:CompanyDetailsAdminComponent
+  },
+  {
+    path:'PlacementImportantTopicsAdminComponent',
+    component:PlacementImportantTopicsAdminComponent
+  },
+  {
+    path:'PlacementTipsAdminComponent',
+    component:PlacementTipsAdminComponent
+  },
+  {
+    path:'ProblemStatementAdminComponent',
+    component:ProblemStatementAdminComponent
+  },
+  {
+    path:'WebinarAdsAdminComponent',
+    component:WebinarAdsAdminComponent
   }
 ];
 

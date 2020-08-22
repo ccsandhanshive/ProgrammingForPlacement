@@ -1,5 +1,5 @@
 export class Topic{
-            topicId:Number
+            id:Number
             topicName:String
             topicLink:String
         }

@@ -71,6 +71,15 @@
       "password": "hg",
       "usertype": "Admin",
       "captcha": "No NEhjfhh"
+    },
+    {
+      "id": 7,
+      "firstname": "chetan",
+      "lastname": "sandanshiv",
+      "email": "ccsandhanshive2018@gmail.com",
+      "password": "123",
+      "usertype": "Admin",
+      "captcha": "No NEED"
     }
   ]
 }
