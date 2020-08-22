@@ -16,7 +16,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; 
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterUserComponent } from './register-user/register-user.component';
-import {UsersService} from './shared/users.service'
+import {UsersService} from './shared/users.service';
+import { CompanyDetailsAdminComponent } from './company-details-admin/company-details-admin.component';
+import { PlacementImportantTopicsAdminComponent } from './placement-important-topics-admin/placement-important-topics-admin.component';
+import { PlacementTipsAdminComponent } from './placement-tips-admin/placement-tips-admin.component';
+import { WebinarAdsAdminComponent } from './webinar-ads-admin/webinar-ads-admin.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +34,11 @@ import {UsersService} from './shared/users.service'
     CompanyDetailsComponent,
     WebinarAdsComponent,
     PlacementImportantTopicsComponent,
-    RegisterUserComponent
+    RegisterUserComponent,
+    CompanyDetailsAdminComponent,
+    PlacementImportantTopicsAdminComponent,
+    PlacementTipsAdminComponent,
+    WebinarAdsAdminComponent
   ],
   imports: [
     BrowserModule,

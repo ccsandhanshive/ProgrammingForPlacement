@@ -13,6 +13,13 @@
       "lastname": "sandhanshive",
       "email": "cs@gmail.com",
       "password": "cs123"
+    },
+    {
+      "id": 3,
+      "firstname": "chetan",
+      "lastname": "sandanshiv",
+      "email": "ccsandhanshive2018@gmail.com",
+      "password": "1234567890"
     }
   ]
 }
