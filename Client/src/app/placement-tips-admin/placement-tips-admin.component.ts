@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import {placementData} from './placementTipsInterface'
 import {PlacementTipsService} from "../placement-tips.service"
 @Component({
-  selector: 'app-placement-tips',
-  templateUrl: './placement-tips.component.html',
-  styleUrls: ['./placement-tips.component.css']
+  selector: 'app-placement-tips-admin',
+  templateUrl: './placement-tips-admin.component.html',
+  styleUrls: ['./placement-tips-admin.component.css']
 })
-export class PlacementTipsComponent implements OnInit {
+export class PlacementTipsAdminComponent implements OnInit {
   pdata:any;
   constructor(private PlacementTipsService:PlacementTipsService) { }
 

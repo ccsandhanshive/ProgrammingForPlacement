@@ -1,12 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {WebinarAdsService} from '../webinar-ads.service' 
-
 @Component({
-  selector: 'app-webinar-ads',
-  templateUrl: './webinar-ads.component.html',
-  styleUrls: ['./webinar-ads.component.css']
+  selector: 'app-webinar-ads-admin',
+  templateUrl: './webinar-ads-admin.component.html',
+  styleUrls: ['./webinar-ads-admin.component.css']
 })
-export class WebinarAdsComponent implements OnInit {
+export class WebinarAdsAdminComponent implements OnInit {
   Wdata:any;
   constructor(private WebinarAdsService:WebinarAdsService) { }
 
@@ -22,5 +21,4 @@ export class WebinarAdsComponent implements OnInit {
       }
      );
   }
-
 }
