@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CompanyDetailsService} from '../company-details.service'
+import {CompanyDetailsService} from '../shared/company-details.service'
 @Component({
   selector: 'app-company-information',
   templateUrl: './company-information.component.html',

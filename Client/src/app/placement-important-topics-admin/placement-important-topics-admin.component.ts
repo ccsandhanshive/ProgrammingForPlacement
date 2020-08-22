@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {PlacementImportantTopicsService} from '../placement-important-topics.service'
+import {PlacementImportantTopicsService} from '../shared/placement-important-topics.service'
 @Component({
   selector: 'app-placement-important-topics-admin',
   templateUrl: './placement-important-topics-admin.component.html',
