@@ -1,15 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output, EventEmitter } from '@angular/core';
 import { LogUpService } from '../log-up/log-up.service';
 import { UsersService } from '../shared/users.service';
 import { Users } from '../model/users.model';
 import { Admins } from '../model/users.model';
 import {Router} from '@angular/router'
+import {AppComponent} from '../app.component'
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+ @Output() user=new EventEmitter<String>();
   allUsers: Users[];
   allAdmins:Admins[];
 
@@ -65,7 +67,7 @@ export class LoginComponent implements OnInit {
       //  alert('login Successful');
        this.loginFlag=true;
        this.checkinsideadminflag=true;
-       alert('login Successful');
+       this.user.emit("Student login")
 
        break;
      }
@@ -76,7 +78,7 @@ export class LoginComponent implements OnInit {
     if(person.a==val.email && person.b==val.password)
     {
       this.loginFlag=true;  
-      alert('login Successful'); 
+      this.user.emit("Admin login")
       // this.router.navigate(['/userlist']);
       this.gotoHome=true;
       this.hidelogin1();
@@ -91,7 +93,7 @@ export class LoginComponent implements OnInit {
    
   }
   if(this.loginFlag==false){
-    alert("NO User EXISTS!! OR Please Check your Email-ID or Password")
+    this.user.emit("")
   }
  
 
