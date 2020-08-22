@@ -5,14 +5,72 @@
       "firstname": "swapnil",
       "lastname": "Borase",
       "email": "sb@gmail.com",
-      "password": "sb123"
+      "password": "asasd",
+      "usertype": "Student"
     },
     {
       "id": 2,
       "firstname": "chetan",
       "lastname": "sandhanshive",
       "email": "cs@gmail.com",
-      "password": "cs123"
+      "password": "cs123",
+      "usertype": "Student"
+    }
+  ],
+  "Admin": [
+    {
+      "id": 1,
+      "firstname": "swapnil",
+      "lastname": "Borase",
+      "email": "sb1@gmail.com",
+      "password": "1234",
+      "usertype": "Admin",
+      "captcha": "ABCXYZ"
+    },
+    {
+      "id": 2,
+      "firstname": "swapnil",
+      "lastname": "Borase",
+      "email": "e",
+      "password": "sb123",
+      "usertype": "Admin",
+      "captcha": "ABCXYZ"
+    },
+    {
+      "id": 3,
+      "firstname": "",
+      "lastname": "",
+      "email": "f",
+      "password": "",
+      "usertype": "Admin",
+      "captcha": ""
+    },
+    {
+      "id": 4,
+      "firstname": "",
+      "lastname": "",
+      "email": "g",
+      "password": "",
+      "usertype": "Admin",
+      "captcha": "asdasd"
+    },
+    {
+      "id": 5,
+      "firstname": "",
+      "lastname": "",
+      "email": "h",
+      "password": "",
+      "usertype": "",
+      "captcha": "No NEED"
+    },
+    {
+      "id": 6,
+      "firstname": "Swapnil",
+      "lastname": "Borase",
+      "email": "s@gmail.comcgc",
+      "password": "hg",
+      "usertype": "Admin",
+      "captcha": "No NEhjfhh"
     }
   ]
 }

@@ -16,7 +16,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; 
 import { ReactiveFormsModule } from '@angular/forms';
 import { RegisterUserComponent } from './register-user/register-user.component';
-import {UsersService} from './shared/users.service'
+import {UsersService} from './shared/users.service';
+import { ForgetPasswordComponent } from './forget-password/forget-password.component';
+import { DisplayUserDetailsComponent } from './display-user-details/display-user-details.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,9 @@ import {UsersService} from './shared/users.service'
     CompanyDetailsComponent,
     WebinarAdsComponent,
     PlacementImportantTopicsComponent,
-    RegisterUserComponent
+    RegisterUserComponent,
+    ForgetPasswordComponent,
+    DisplayUserDetailsComponent
   ],
   imports: [
     BrowserModule,

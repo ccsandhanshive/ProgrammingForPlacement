@@ -4,7 +4,9 @@ import { NgForm ,FormsModule } from '@angular/forms';
 // import { LogUpService} from './log-up.service';
 import { UsersService } from '../shared/users.service';
 import { Users } from '../model/users.model';
-import {Router} from '@angular/router'
+import {Router} from '@angular/router';
+import { Inject }  from '@angular/core';
+import { DOCUMENT } from '@angular/common'; 
 
 @Component({
   selector: 'app-log-up',
@@ -16,7 +18,7 @@ export class LogUpComponent implements OnInit {
 loadlogin:boolean
   
  
-constructor( public service:UsersService,private router:Router) { }
+constructor( public service:UsersService,private router:Router,@Inject(DOCUMENT) document) { }
 
   ngOnInit(): void {
     this.loadlogin=true;
@@ -24,14 +26,38 @@ constructor( public service:UsersService,private router:Router) { }
 
   createUser(currentUser:Users)
   {
+  
     console.log(currentUser);
     if(currentUser.id!=null){
-      console.log('Update'); 
-      this.UpdateUsr(currentUser);
+
+      if ((<HTMLInputElement>document.getElementById("user")).value == "Student") {
+        console.log('Update'); 
+         this.UpdateUsr(currentUser);
+       
+      } else {
+        // (<HTMLInputElement>document.getElementById("captcha")).disabled=false;
+        // (<HTMLInputElement>document.getElementById("verify")).visibility='hidden';
+        console.log("okds");
+        this.UpdateAdm(currentUser);
+        
+      }
+
+      
     }
     else{
-      console.log('create');
-      this.createUsr(currentUser);   
+      if ((<HTMLInputElement>document.getElementById("user")).value == "Student") {
+        console.log('Create'); 
+         this.createUsr(currentUser);
+       
+      } else {
+        // (<HTMLInputElement>document.getElementById("captcha")).disabled=false;
+        // (<HTMLInputElement>document.getElementById("verify")).visibility='hidden';
+        console.log("osdksdsd");
+        this.createAdm(currentUser);
+        
+
+      }
+        
     }
     
   }
@@ -43,9 +69,29 @@ constructor( public service:UsersService,private router:Router) { }
     this.service.UpdateUsr(usr).subscribe();
   }
 
+  createAdm(usr :Users)
+  {
+    this.service.createAdm(usr).subscribe();
+  }
+  UpdateAdm(usr:Users){
+    this.service.UpdateAdm(usr).subscribe();
+  }
+
   gotologin(){
     this.router.navigate(['/login']);
     this.loadlogin=false;
+  }
+
+  Admin(){
+    console.log('ok');
+    if ((<HTMLInputElement>document.getElementById("user")).value == "Student") {
+      (<HTMLInputElement>document.getElementById("captcha")).disabled=true;
+     
+    } else {
+      (<HTMLInputElement>document.getElementById("captcha")).disabled=false;
+      // (<HTMLInputElement>document.getElementById("verify")).visibility='hidden';
+    }
+    
   }
 } 
 

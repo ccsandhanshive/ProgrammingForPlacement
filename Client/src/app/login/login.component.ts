@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LogUpService } from '../log-up/log-up.service';
 import { UsersService } from '../shared/users.service';
 import { Users } from '../model/users.model';
+import { Admins } from '../model/users.model';
 import {Router} from '@angular/router'
 @Component({
   selector: 'app-login',
@@ -9,13 +10,19 @@ import {Router} from '@angular/router'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  allUsers: Users[];
+  allAdmins:Admins[];
 
   email:String="";
   pswrepeat:String="";
   psw:String="";
   loginFlag=false;
-  allUsers: Users[];
+ 
   loadlogup:boolean;
+  loadoutlet:boolean;
+  checkinsideadminflag:boolean=false;
+  gotoHome:boolean=false;
+
   constructor(private LogUpService:LogUpService,private userService:UsersService,private router:Router) {  }
 
   ngOnInit(): void {
@@ -23,22 +30,23 @@ export class LoginComponent implements OnInit {
     // .subscribe((data)=>{
     //   console.log(data);
     // })
+    this.loadoutlet=false;
     this.loadlogup=true;
     this.getAllUsersdata();
+    
   }
   getAllUsersdata()
   {
     this.userService.getAllUsers().subscribe(
       (data:Users[]) =>{
         this.allUsers=data;
-        // console.log(this.allUsers)
-        // this.allUsers.forEach(element => {
-        // console.log(element.firstname);
-        
-          
-        // });
 
-        
+      }
+    )
+    this.userService.getAllAdmins().subscribe(
+      (data:Admins[]) =>{
+        this.allAdmins=data;
+        console.log(this.allAdmins)
       }
     )
   }
@@ -55,28 +63,53 @@ export class LoginComponent implements OnInit {
      if(person.a==val.email && person.b==val.password)
      {
       //  alert('login Successful');
-       this.loginFlag=true;   
+       this.loginFlag=true;
+       this.checkinsideadminflag=true;
+       alert('login Successful');
+
        break;
-     }
-     else{
-      this.loginFlag=false;  
-      // alert('login Failed');
-      
      }
     
    }
-   if(this.loginFlag==true)
-   {
-    alert('login Successful');
-   }
-   else{
-    alert('login Failed');
-   }
+   if(!(this.checkinsideadminflag)){
+   for (var val of this.allAdmins) {
+    if(person.a==val.email && person.b==val.password)
+    {
+      this.loginFlag=true;  
+      alert('login Successful'); 
+      // this.router.navigate(['/userlist']);
+      this.gotoHome=true;
+      this.hidelogin1();
+
+      break;
+    }
+    else{
+     this.loginFlag=false;  
+     // alert('login Failed');
+     
+    }
+   
+  }
+  if(this.loginFlag==false){
+    alert("NO User EXISTS!! OR Please Check your Email-ID or Password")
+  }
+ 
+
+}
+   
   }
 
-  gotologup(){
-    this.router.navigate(['/logup']);
+  // gotologup(){
+  //   this.router.navigate(['/logup']);
+    
+  // }
+  hidelogin(){
     this.loadlogup=false;
+    this.loadoutlet=true;
+  }
+  hidelogin1(){
+    this.loadlogup=false;
+    this.loadoutlet=false;
   }
 
 }
