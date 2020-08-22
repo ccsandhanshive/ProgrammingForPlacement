@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Problem} from '../model/problem.model'
-import {AddProblemStatementService} from '../shared/add-problem-statement.service'
+// import {AddProblemStatementService} from '../shared/add-problem-statement.service'
+import {ProblemStatementsService} from '../shared/problem-statements.service'
 import {Location} from '@angular/common'
 @Component({
   selector: 'app-problem-statement-admin',
@@ -8,21 +9,55 @@ import {Location} from '@angular/common'
   styleUrls: ['./problem-statement-admin.component.css']
 })
 export class ProblemStatementAdminComponent  {
-  problem=new Problem();
-  submitted=false;
-  constructor(private AddProblemStatementService:AddProblemStatementService,
-              private location:Location) {
+
+allProblem: Problem[];
+
+constructor(public problemStatementsService:ProblemStatementsService) { }
+
+ngOnInit(): void {
+  this.getAlldata();
+}
+
+getAlldata()
+{
+  this.problemStatementsService.getAllProblem().subscribe(
+    (data:Problem[]) =>{
+      this.allProblem=data;
+      console.log(this.allProblem)
+      // this.allUsers.forEach(element => {
+      // console.log(element.firstname);
+        
+      // });
+    }
+  )
+}
+
+delete(id:Number){
+  console.log(id);
+  this.problemStatementsService.deleteProblem(id).subscribe(
+    (data:Problem) =>{
+      this.getAlldata();
+      // console.log(this.allUsers)
+    }
+  )
+}
+
+edit(usr){
+  console.log(usr);
+  this.problemStatementsService.CurrentProblem=Object.assign({},usr);
+}
+
+create(CurrentProblem:Problem)
+{
+  console.log(CurrentProblem);
+  if(CurrentProblem.id!=null){
+      console.log('Update'); 
+      this.problemStatementsService.UpdateProblem(CurrentProblem).subscribe();   
   }
-  newProblem():void{
-    this.submitted=false
-    this.problem=new Problem();
+  else{
+      console.log('Create'); 
+       this.problemStatementsService.createProblem(CurrentProblem).subscribe();       
   }
-  addProblem(){
-    this.submitted=true
-    this.save();
-  }
- save(){
-   console.log(this.problem);
- //  this.AddProblemStatementService.addProblem(this.problem).subscribe();
- }
+  
+}
 }

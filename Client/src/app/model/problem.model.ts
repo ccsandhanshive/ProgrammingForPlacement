@@ -1,5 +1,5 @@
 export class Problem{
-    problemId:Number
+    id:Number
     problemTitle:String
     problemStatement:String
     input:String
