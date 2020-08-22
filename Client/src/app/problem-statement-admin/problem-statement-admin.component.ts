@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import {Problem} from './problemClass'
+import {Problem} from '../model/problem.model'
 import {AddProblemStatementService} from '../shared/add-problem-statement.service'
 import {Location} from '@angular/common'
 @Component({
-  selector: 'app-add-problem-statement',
-  templateUrl: './add-problem-statement.component.html',
-  styleUrls: ['./add-problem-statement.component.css']
+  selector: 'app-problem-statement-admin',
+  templateUrl: './problem-statement-admin.component.html',
+  styleUrls: ['./problem-statement-admin.component.css']
 })
-export class AddProblemStatementComponent{
+export class ProblemStatementAdminComponent  {
   problem=new Problem();
   submitted=false;
   constructor(private AddProblemStatementService:AddProblemStatementService,
@@ -23,7 +23,6 @@ export class AddProblemStatementComponent{
   }
  save(){
    console.log(this.problem);
-   this.AddProblemStatementService.addProblem(this.problem).subscribe();
+ //  this.AddProblemStatementService.addProblem(this.problem).subscribe();
  }
 }
-

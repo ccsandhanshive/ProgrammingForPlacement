@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable} from 'rxjs';
-import {WebinarData} from "./webinar-ads/webinarAdsInterface"
+import {placementData} from "../placement-tips/placementTipsInterface"
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 @Injectable({
   providedIn: 'root'
 })
-export class WebinarAdsService {
-  private webadsUrl = 'http://localhost:3000/webads';
+export class PlacementTipsService {
+  private placementTipsUrl = 'http://localhost:3000/placementTips';
   constructor(private http: HttpClient) { }
-  getWebads(): Observable<WebinarData[]> {
-    return this.http.get<WebinarData[]>(this.webadsUrl)
+  getPlacementTips(): Observable<placementData[]> {
+    return this.http.get<placementData[]>(this.placementTipsUrl)
   }
 }

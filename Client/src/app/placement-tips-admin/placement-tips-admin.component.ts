@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {PlacementTipsService} from "../placement-tips.service"
+import {PlacementTipsService} from "../shared/placement-tips.service"
 @Component({
   selector: 'app-placement-tips-admin',
   templateUrl: './placement-tips-admin.component.html',

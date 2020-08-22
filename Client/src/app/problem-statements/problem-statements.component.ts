@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ProblemStatementsService } from '../problem-statements.service';
+import { ProblemStatementsService } from '../shared/problem-statements.service';
 @Component({
   selector: 'app-problem-statements',
   templateUrl: './problem-statements.component.html',

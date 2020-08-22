@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {WebinarAdsService} from '../webinar-ads.service' 
+import {WebinarAdsService} from '../shared/webinar-ads.service' 
 
 @Component({
   selector: 'app-webinar-ads',

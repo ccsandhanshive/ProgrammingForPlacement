@@ -1,6 +1,6 @@
 import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 import {Company} from "./companyInterface"
-import {CompanyDetailsService} from '../company-details.service'
+import {CompanyDetailsService} from '../shared/company-details.service'
 
 @Component({
   selector: 'app-company-details',

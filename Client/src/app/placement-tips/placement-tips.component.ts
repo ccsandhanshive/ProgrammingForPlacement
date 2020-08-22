@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {placementData} from './placementTipsInterface'
-import {PlacementTipsService} from "../placement-tips.service"
+import {PlacementTipsService} from "../shared/placement-tips.service"
 @Component({
   selector: 'app-placement-tips',
   templateUrl: './placement-tips.component.html',
