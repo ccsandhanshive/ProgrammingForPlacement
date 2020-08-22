@@ -1,15 +1,99 @@
-<div class="demotext">
-    <table class="blueTable">
-        <thead>
-            <th>Topic Id</th>
-            <th>Topic Name</th>
-            <th></th>
-        </thead>
-        <tbody>
-            <tr *ngFor="let t of topics">
-                <td>{{t.topicId}}</td>
-                <td>{{t.topicName}}</td>
-                <td><a class="myButton" [href]="t.topicLink" class="myButton">Launch cource</a></td>
-        </tbody>
-    </table>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body> 
+
+    <div class="jumbotron" style="text-align:center;padding: 1% ;">
+        <h1>Placement Topic Details</h1>
+                <p>Please select Entry to Show, Edit or Delete Record </p>
     </div>
+    <hr>
+    
+    <div class="container">
+        <div class="row">
+            
+            <div class="col col-6">
+                
+                <div class="formclass">
+                    <div class="">                
+                    <form >
+                        <div class="container">
+                        <label ><b>TopicName</b></label>
+                        <input type="text" placeholder="Enter Topic Name" name="TopicName"  [(ngModel)]="placementTopicsService.CurrentTopic.topicName"  required>
+        
+                        <label ><b>TopicLink</b></label>
+                        <input type="text" placeholder="TopicLink " name="topicLink"   [(ngModel)]="placementTopicsService.CurrentTopic.topicLink"  required>
+                                    
+                        <hr>
+                        <button  type="submit" class="registerbtn" (click)="create(placementTopicsService.CurrentTopic)">Save</button>
+                        </div>
+                        
+                    </form>
+                    
+            </div>
+        </div>
+            </div>
+            <div class="col col-6">
+                <div class="Container">
+                    <!-- <div class="jumbotron">  -->
+                        
+                    <div class="row">
+                  
+                      <div class="col col-sm-5 col-5">
+                  
+                      </div>     
+                      <table class="table table-dash ">
+                        <tr>
+                          <td>topicName</td>
+                          <td>topicLink</td>
+                          <td>Edit/Show</td>
+                          <td>Delete</td>
+                          
+                        </tr>
+                          <tr *ngFor="let tpk of allTopic">
+                            <td>{{tpk.topicName}}</td>
+                            <td>{{tpk.topicLink}}</td>
+                            
+                            <td>
+                              <a class="btn" (click)="edit(tpk)">
+                                <i class="fa fa-edit"></i>
+                              </a>
+                            </td>
+                            <td>
+                              <a class="btn text-danger" (click)="delete(tpk.id)">
+                                <i class="fa fa-trash"></i>
+                              </a>
+                            </td>
+                          </tr>
+                        </table>
+                    
+                  
+                      </div>
+                  
+                  <!-- </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="signin" style="text-align:center;padding: 1%">
+
+        <h1>Admins Panel</h1>
+        </div>
+        
+
+  
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,5 +1,5 @@
 export class Company{
-            companyId:Number
+            id:Number
             imageUrl:String
             companyName:String
             package:Number
