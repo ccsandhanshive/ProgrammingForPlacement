@@ -383,4 +383,8 @@ h3 {
         text-shadow: #474747 3px 5px 2px;
         color: black;
         background: #1C11FF;
-        }
+		}
+		video {
+			width: 100%;
+			height: auto;
+		  }

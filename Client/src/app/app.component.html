@@ -3,26 +3,36 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Programming for placeemnt</title>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="canonical" href="http://www.alessioatzeni.com/wp-content/tutorials/html-css/CSS3-Menu-Navigation-Effect/index.html" />
 </head>
 <body>
 <h1>GITSYS<small>Programming for placement</small></h1>
-<div class="container">   
-<div class="container">
-<ul id="paneltwo">
-<li class="mask" style="height:50px;"><a href="login">Login</a></li>
-<li class="linkOne" style="height:50px;"><a routerLink="ProblemStatementsComponent">Programming For Placements</a></li>
-<li class="linkTwo" style="height:50px;"><a routerLink="PlacementImportantTopicsComponent">Placements Important Topics</a></li>
-<li class="linkThree" style="height:50px;"><a routerLink="PlacementTipsComponent">Tips for placement</a></li>
-<li class="linkFour" style="height:50px;"><a routerLink="CompanyInformationComponent">Company Information</a></li>
+<div class="container" style="margin: auto; text-align: center;font-family:verdana; font-size: large;"> 
+    <div class="container">   
+        <!-- SECOND EXAMPLE -->
+        {{user}}
+        <ul id="paneltwo">
+            <li class="mask" style="height:50px;"><h3><a href="#about">Home</a></h3></li>
+            <li class="linkOne" style="height:50px;"><a href="#login" (click)="setLogin()">Login</a></li>
+            <li class="linkTwo" style="height:50px;"><a href="https://www.onlinegdb.com/" (click)="setLoginFalse()">Start Coding</a></li>
+            <li class="linkThree" style="height:50px;"><a routerLink="WebinarAdsComponent" (click)="setLoginFalse()">Webinars</a></li>
+        </ul>
+    </div>  
+   
+<div class="container" style="font-size: medium;" >
+<ul id="paneltwo" *ngIf="user=='Student login'">
+<li class="mask" style="height:50px;"><a routerLink="ProblemStatementsComponent" (click)="setLoginFalse()">Programming For Placements</a></li>
+<li class="linkOne" style="height:50px;"><a routerLink="PlacementImportantTopicsComponent" (click)="setLoginFalse()">Placements Important Topics</a></li>
+<li class="linkTwo" style="height:50px;"><a routerLink="PlacementTipsComponent" (click)="setLoginFalse()">Tips for placement</a></li>
+<li class="linkThree" style="height:50px;"><a routerLink="CompanyInformationComponent" (click)="setLoginFalse()">Company Information</a></li>
 </ul>
-</div>
-<div class="container">   
-    <!-- SECOND EXAMPLE -->
-    <ul id="paneltwo">
-        <li class="mask" style="height:50px;"><h3><a href="#about">Home</a></h3></li>
-        <li class="linkOne" style="height:50px;"><a href="https://www.onlinegdb.com/">Start Coding</a></li>
-        <li class="linkTwo" style="height:50px;"><a routerLink="WebinarAdsComponent">Webinars</a></li>
+<ul id="paneltwo" style="font-size: medium;" *ngIf="user=='Admin login'">
+    <li class="mask" style="height:50px;"><a routerLink="ProblemStatementAdminComponent" (click)="setLoginFalse()">Programming For Placements</a></li>
+    <li class="linkOne" style="height:50px;"><a routerLink="PlacementImportantTopicsAdminComponent" (click)="setLoginFalse()">Placements Important Topics</a></li>
+    <li class="linkTwo" style="height:50px;"><a routerLink="PlacementTipsAdminComponent" (click)="setLoginFalse()">Tips for placement</a></li>
+    <li class="linkThree" style="height:50px;"><a routerLink="CompanyDetailsAdminComponent" (click)="setLoginFalse()">Company Information</a></li>
+    <li class="linkFour" style="height:50px;"><a routerLink="WebinarAdsAdminComponent"(click)="setLoginFalse()">Webinars control</a></li>
     </ul>
 </div>
 </div>
@@ -33,29 +43,14 @@
 <br>
 <br>
 </div>
+<section id="Login">
+    <app-login (user)='setUser($event)' *ngIf="login"></app-login>
+</section>
 <section class="footer-distributed" id="about" style="font-size:15px;text-align: center;">
  
     <div class="footer-left">
 
     <h3>Gitsys</h3>
-
-<!-- <div  *ngIf="load">
-    <app-login></app-login>
-</div>
-<div *ngIf="!load">
-<app-log-up></app-log-up>
-</div> -->
-<!-- <app-display-user-details></app-display-user-details> -->
-
-<!-- <app-login></app-login> -->
-<!-- <app-register-user></app-register-user> -->
-<!-- <app-placement-tips></app-placement-tips>
- <app-webinar-ads></app-webinar-ads>
- <app-log-up></app-log-up> 
- <app-login></app-login>  -->
- 
-   
-
     <p class="footer-company-name">chetan sandanshiv</p>
     <p class="footer-company-name">Swapnil borse</p>
     </div>
