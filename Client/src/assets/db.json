@@ -27,7 +27,7 @@
       "password": "1234",
       "usertype": "Admin",
       "captcha": "ABCXYZ"
-    },
+    }, 
     {
       "id": 2,
       "firstname": "swapnil",
@@ -266,16 +266,6 @@
     {
       "id": 1,
       "problemTitle": "",
-      "problemStatement": "",
-      "input": "",
-      "output": "",
-      "program": "",
-      "language": "",
-      "description": ""
-    },
-    {
-      "id": 2,
-      "problemTitle": "qwee",
       "problemStatement": "",
       "input": "",
       "output": "",

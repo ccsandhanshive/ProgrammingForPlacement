@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Problem} from '../model/problem.model'
-// import {AddProblemStatementService} from '../shared/add-problem-statement.service'
+ import {AddProblemStatementService} from '../shared/add-problem-statement.service'
 import {ProblemStatementsService} from '../shared/problem-statements.service'
 import {Location} from '@angular/common'
 @Component({
@@ -11,14 +11,15 @@ import {Location} from '@angular/common'
 export class ProblemStatementAdminComponent  {
 
 allProblem: Problem[];
-showEdit:Boolean
-constructor(public problemservice:ProblemStatementsService) { }
+allProblem1: Problem[];
+
+
+constructor(public addProblemStatementService:AddProblemStatementService,public problemservice:ProblemStatementsService) { }
 
 ngOnInit(): void {
   this.getAlldata();
-  this.showEdit=false
 }
-setShowEditTrue
+
 getAlldata()
 {
   this.problemservice.getAllProblem().subscribe(
@@ -43,9 +44,27 @@ delete(id:Number){
   )
 }
 
-edit(usr){
-  console.log(usr);
-  this.problemservice.CurrentProblem=Object.assign({},usr);
+show(prob){
+  console.log(prob);
+  this.addProblemStatementService.CurrentProblem=Object.assign({},prob);
+  
+}
+edit(prob){
+  console.log(prob);
+  this.problemservice.CurrentProblem=Object.assign({},prob);
+  
+}
+
+Approve(prob:Problem,del:Number){
+  console.log('Create');
+  
+  var a:Number=Number(prob.id)+Math.random()*10;
+  prob.id=100+Number(a);
+  console.log(a);
+  this.problemservice.createProblem(prob).subscribe();
+  // this.problemservice.CurrentProblem.id=100;
+
+  this.delete(del);
 }
 
 create(CurrentProblem:Problem)
