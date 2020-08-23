@@ -1,7 +1,10 @@
-<div style="background-color: white;">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div style="width: 50%; margin: 0 auto;">
+<div style="background-color: white;width:100%;">
 <table >
     <tbody>
-        <td>
+      
 <div class="demotext">
     <table class="blueTable">
       <thead>
@@ -10,62 +13,62 @@
         <th></th>
       </thead>
       <tbody>
-        <tr *ngFor="let c of companies">
-          <td>{{c.companyId}}</td>
-          <td>{{c.companyName}}</td>      
-         <td><app-company-details [id]='c.companyId' (company)='getCompanyDetails($event)'></app-company-details></td>
+        <tr *ngFor="let c of allCompany">
+          <td>{{c.id}}</td>
+          <td>{{c.companyName}}</td>     
+          <td><button class="btn btn-primary" (click)="edit(c)">More</button></td> 
+         <!-- <td><app-company-details [id]='c.companyId' (company)='getCompanyDetails($event)'></app-company-details></td> -->
         </tr>
       </tbody>
     </table>
   </div>
+</tbody>
+</table>
+</div>
   <br>
-  </td>
-  <td>
   <br>
-  <div class="demotext">
-    <table class="blueTable" *ngIf="available">
+  
+  <div class="demotext" *ngIf="available">
+    <table class="blueTable"  >
       <thead>
         <th>Company details</th>
       </thead>
       <tbody style="text-align: center;">
         <tr>
-            <td>Company Id</td>
-            <td>{{company.companyId}}</td>
-        </tr>
-        <tr>
             <td>Image</td>
-            <td><img [src]="company.imageUrl"  width="200" height="200"/></td></tr>
+            <td><img [src]="companyService.CurrentCompany.imageUrl"  width="200" height="200"/></td></tr>
         <tr>
             <td>Company Name</td>
-            <td>{{company.companyName}}</td>
+            <td>{{companyService.CurrentCompany.companyName}}</td>
         </tr>
         <tr>
             <td>Package Per Anum In lakes</td>
-            <td>{{company.package}}</td>
+            <td>{{companyService.CurrentCompany.package}}</td>
         </tr>
         <tr>
             <td>Eligible Passing Year</td>
-            <td>{{company.passingYear}}</td>
+            <td>{{companyService.CurrentCompany.passingYear}}</td>
         </tr>
         <tr>
             <td>Eligibal Branches</td>
-            <td>{{company.eligibalBranches}}</td>
+            <td>{{companyService.CurrentCompany.eligibalBranches}}</td>
         </tr>
         <tr>
             <td>Job Description</td>
             <td >
-                <ul *ngFor="let point of company.jobDescription">
+                <ul *ngFor="let point of companyService.CurrentCompany.jobDescription">
                     <li>{{point}}</li>
                   </ul>
             </td>
         </tr>
         <tr><td></td>
-            <td><a [href]="company.registrationLink" class="myButton">Apply now</a></td>
+          <td><a href="https://www.bitrix24.com/uses/free-online-registration-form-creator.php" class="myButton">Apply now</a></td>
+
+            <!-- <td><a [href]="companyService.CurrentCompany.registrationLink" class="myButton">Apply now</a></td> -->
         </tr>
       </tbody>
       </table>
   </div>
-</td>
-</tbody>
-</table>
-</div>
+  </div>
+
+

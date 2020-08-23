@@ -5,30 +5,30 @@
       <hr>
       <label ><b>Title</b></label><br>
       <input type="text" placeholder="Enter Title" id="problemTitle" size="80" required 
-      [(ngModel)]="problem.problemTitle" name="problemTitle" #problemTitle="ngModel"><br>
+      [(ngModel)]="addProblemStatementService.CurrentProblem.problemTitle" name="problemTitle" #problemTitle="ngModel"><br>
        <br>
       <label ><b>Problem statement</b></label><br>
       <textarea cols="75" rows="10"  placeholder="Enter Problem statement" id="problemStatement" required
-      [(ngModel)]="problem.problemStatement" name="problemStatement" #problemStatement="ngModel"></textarea><br>
+      [(ngModel)]="addProblemStatementService.CurrentProblem.problemStatement" name="problemStatement" #problemStatement="ngModel"></textarea><br>
       <br>
       <div>
       <label ><b>Input</b></label><br>
       <textarea cols="75"  rows="10"   placeholder="Enter Input" id="input" required
-      [(ngModel)]="problem.input" name="input" #input="ngModel"></textarea><br>
+      [(ngModel)]="addProblemStatementService.CurrentProblem.input" name="input" #input="ngModel"></textarea><br>
       <br>
       <label ><b>Output</b></label><br>
       <textarea cols="75"  rows="10"    placeholder="Output" id="output" required
-      [(ngModel)]="problem.output" name="output" #output="ngModel"></textarea><br>  
+      [(ngModel)]="addProblemStatementService.CurrentProblem.output" name="output" #output="ngModel"></textarea><br>  
     </div>
       <br>
       <label ><b>Write program for sample</b></label><br>
       <textarea cols="75"  rows="20"    placeholder="Write program" id="program" required
-      [(ngModel)]="problem.program" name="program" #program="ngModel"></textarea><br><br>
+      [(ngModel)]="addProblemStatementService.CurrentProblem.program" name="program" #program="ngModel"></textarea><br><br>
       <br>
       <label>Select language:</label><br>
 
       <select id="language" required
-      [(ngModel)]="problem.language" name="language" #language="ngModel">
+      [(ngModel)]="addProblemStatementService.CurrentProblem.language" name="language" #language="ngModel">
         <option value="c">C</option>
         <option value="c++">C++</option>
         <option value="java">Java</option>
@@ -36,10 +36,10 @@
       </select><br><br>
       <label ><b>Description(optional)</b></label><br>
       <textarea cols="75" name="comments" rows="10"    placeholder="Enter Description"  id="description"
-      [(ngModel)]="problem.description" name="description" #description="ngModel"></textarea>
+      [(ngModel)]="addProblemStatementService.CurrentProblem.description" name="description" #description="ngModel"></textarea>
       <hr>
       <br>
-      <button type="button" class="myButton" (click)="addProblem()" >Add</button>
+      <button type="button" class="myButton" (click)="create(addProblemStatementService.CurrentProblem)" >Add</button>
 
     </div>
   

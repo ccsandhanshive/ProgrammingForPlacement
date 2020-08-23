@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {WebinarAdsService} from '../shared/webinar-ads.service' 
+import {Webad} from "../model/webad.model"
 
 @Component({
   selector: 'app-webinar-ads',
@@ -7,20 +8,37 @@ import {WebinarAdsService} from '../shared/webinar-ads.service'
   styleUrls: ['./webinar-ads.component.css']
 })
 export class WebinarAdsComponent implements OnInit {
-  Wdata:any;
-  constructor(private WebinarAdsService:WebinarAdsService) { }
+  // Wdata:any;
+
+  allWebad:Webad[];
+  
+  constructor(private webinarAdsService:WebinarAdsService) { }
 
   ngOnInit(): void {
-    this.Wdata=this.getWebads()
+    // this.Wdata=this.getWebads()
+    this.getAlldata();
   }
-  getWebads(){
-    return this.WebinarAdsService.getWebads()
-    .subscribe(
-      Wdata => {
-       console.log(this.Wdata);
-       this.Wdata = Wdata
+  // getWebads(){
+  //   return this.WebinarAdsService.getWebads()
+  //   .subscribe(
+  //     Wdata => {
+  //      console.log(this.Wdata);
+  //      this.Wdata = Wdata
+  //     }
+  //    );
+  // }
+  getAlldata()
+  {
+    this.webinarAdsService.getAllProblem().subscribe(
+      (data:Webad[]) =>{
+        this.allWebad=data;
+        console.log(this.allWebad)
+        // this.allUsers.forEach(element => {
+        // console.log(element.firstname);
+          
+        // });
       }
-     );
+    )
   }
 
 }
