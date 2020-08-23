@@ -8,52 +8,18 @@
 
 </head>
 <body> 
+<!-- for temp-problem Statement -->
 
     <div class="jumbotron" style="text-align:center;padding: 1% ;">
-        <h1>Problem Statement Details</h1>
-                <p>Please select Entry to Show, Edit or Delete Record </p>
+        <h1>Problem Statement Details-TO Accept New Entry</h1>
+                <p>Please select Entry to Show Record </p>
     </div>
     <hr>
     
     <div class="container">
         <div class="row">
             
-            <div class="col col-6">
-                
-                <div class="formclass">
-                    <div class="">                
-                    <form >
-                        <div class="container">
-                        <label ><b>problemTitle</b></label>
-                        <input type="text" placeholder="Enter Heading Name" name="Heading"  [(ngModel)]="problemStatementsService.CurrentProblem.problemTitle"  required>
-                              
-                        <label ><b>problemStatement</b></label>
-                        <textarea  name="problemStatement" rows="4" cols="100" [(ngModel)]="problemStatementsService.CurrentProblem.problemStatement"></textarea>
-                        
-                        <label ><b>input</b></label>
-                        <textarea  name="input" rows="4" cols="100" [(ngModel)]="problemStatementsService.CurrentProblem.input"></textarea>
 
-                        <label ><b>output</b></label>
-                        <textarea  name="output" rows="4" cols="100" [(ngModel)]="problemStatementsService.CurrentProblem.output"></textarea>
-
-                        <label ><b>program</b></label>
-                        <textarea  name="program" rows="4" cols="100" [(ngModel)]="problemStatementsService.CurrentProblem.program"></textarea>
-
-                        <label ><b>language</b></label>
-                        <input type="text" placeholder="Enter language " name="Heading"  [(ngModel)]="problemStatementsService.CurrentProblem.problemTitle"  required>
-
-                        <label for="lastname"><b>description</b></label>
-                        <textarea  name="description" rows="4" cols="100" [(ngModel)]="problemStatementsService.CurrentProblem.description"></textarea>
-
-                        <hr>
-                        <button  type="submit" class="registerbtn" (click)="create(problemStatementsService.CurrentProblem)">Save</button>
-                        </div>
-                        
-                    </form>
-                    
-            </div>
-        </div>
-            </div>
             <div class="col col-6">
                 <div class="Container">
                     <!-- <div class="jumbotron">  -->
@@ -66,20 +32,25 @@
                       <table class="table table-dash ">
                         <tr>
                           <td>Problem Title</td>
-                          <td>Edit/Show</td>
-                          <td>Delete</td>
-                          
+                          <td>Show Record</td>
+                          <td>Approve</td>
+                          <td>Reject</td>                          
                         </tr>
                           <tr *ngFor="let prb of allProblem">
                             <td>{{prb.problemTitle}}</td>                                      
                             <td>
-                              <a class="btn" (click)="edit(prb)">
-                                <i class="fa fa-edit"></i>
+                              <a class="btn" (click)="show(prb)">
+                                <i class="fa fa-eye"></i>
+                              </a>
+                            </td>
+                            <td>
+                              <a class="btn" (click)="Approve(prb,prb.id)">
+                                <i class="fa fa-check"></i>
                               </a>
                             </td>
                             <td>
                               <a class="btn text-danger" (click)="delete(prb.id)">
-                                <i class="fa fa-trash"></i>
+                                <i class="fa fa-close"></i>
                               </a>
                             </td>
                           </tr>
@@ -91,14 +62,140 @@
                   <!-- </div> -->
                 </div>
             </div>
+
+            <div class="col col-6">
+                
+              <div class="formclass">
+                  <div class="">                
+                  <form >
+                      <div class="container">
+                      <label ><b>problemTitle</b></label>
+                      <input type="text" placeholder="Enter Heading Name" name="Heading"  [(ngModel)]="addProblemStatementService.CurrentProblem.problemTitle"  required>
+                            
+                      <label ><b>problemStatement</b></label>
+                      <textarea  name="problemStatement" rows="4" cols="100" [(ngModel)]="addProblemStatementService.CurrentProblem.problemStatement"></textarea>
+                      
+                      <label ><b>input</b></label>
+                      <textarea  name="input" rows="4" cols="100" [(ngModel)]="addProblemStatementService.CurrentProblem.input"></textarea>
+
+                      <label ><b>output</b></label>
+                      <textarea  name="output" rows="4" cols="100" [(ngModel)]="addProblemStatementService.CurrentProblem.output"></textarea>
+
+                      <label ><b>program</b></label>
+                      <textarea  name="program" rows="4" cols="100" [(ngModel)]="addProblemStatementService.CurrentProblem.program"></textarea>
+
+                      <label ><b>language</b></label>
+                      <input type="text" placeholder="Enter language " name="language"  [(ngModel)]="addProblemStatementService.CurrentProblem.language"  required>
+
+                      <label for="lastname"><b>description</b></label>
+                      <textarea  name="description" rows="4" cols="100" [(ngModel)]="addProblemStatementService.CurrentProblem.description"></textarea>
+                      <hr>
+                      <!-- <button  type="submit" class="registerbtn" (click)="create(problemStatementsService.CurrentProblem)">Save</button> -->
+                      </div>
+                      
+                  </form>
+                  
+          </div>
+      </div>
+          </div>
         </div>
     </div>
     <hr>
-    <div class="signin" style="text-align:center;padding: 1%">
-
-        <h1>Admins Panel</h1>
-        </div>
+    
+    
+<!-- for problem Statement -->
         
+
+        <div class="jumbotron" style="text-align:center;padding: 1% ;">
+          <h1>Problem Statement Details - TO Visit Previous Entry</h1>
+                  <p>Please select Entry to Show, Edit or Delete Record </p>
+      </div>
+      <hr>
+      
+      <div class="container">
+          <div class="row">
+              
+  
+              <div class="col col-6">
+                  <div class="Container">
+                      <!-- <div class="jumbotron">  -->
+                          
+                      <div class="row">
+                    
+                        <div class="col col-sm-5 col-5">
+                    
+                        </div>     
+                        <table class="table table-dash ">
+                          <tr>
+                            <td>Problem Title</td>
+                            <td>Show/Edit</td>
+                            <td>Reject</td>                          
+                          </tr>
+                            <tr *ngFor="let prb of allProblem1">
+                              <td>{{prb.problemTitle}}</td>                                      
+                              <td>
+                                <a class="btn" (click)="edit(prb)">
+                                  <i class="fa fa-eye"></i>&nbsp;<b>/</b>&nbsp;<i class="fa fa-edit"></i>
+                                </a>
+                              </td>
+                              <td>
+                                <a class="btn text-danger" (click)="delete_Problem(prb.id)">
+                                  <i class="fa fa-trash"></i>
+                                </a>
+                              </td>
+                            </tr>
+                          </table>
+                      
+                    
+                        </div>
+                    
+                    <!-- </div> -->
+                  </div>
+              </div>
+  
+              <div class="col col-6">
+                  
+                <div class="formclass">
+                    <div class="">                
+                    <form >
+                        <div class="container">
+                        <label ><b>problemTitle</b></label>
+                        <input type="text" placeholder="Enter Heading Name" name="Heading"  [(ngModel)]="problemservice.CurrentProblem.problemTitle"  required>
+                              
+                        <label ><b>problemStatement</b></label>
+                        <textarea  name="problemStatement" rows="4" cols="100" [(ngModel)]="problemservice.CurrentProblem.problemStatement"></textarea>
+                        
+                        <label ><b>input</b></label>
+                        <textarea  name="input" rows="4" cols="100" [(ngModel)]="problemservice.CurrentProblem.input"></textarea>
+  
+                        <label ><b>output</b></label>
+                        <textarea  name="output" rows="4" cols="100" [(ngModel)]="problemservice.CurrentProblem.output"></textarea>
+  
+                        <label ><b>program</b></label>
+                        <textarea  name="program" rows="4" cols="100" [(ngModel)]="problemservice.CurrentProblem.program"></textarea>
+  
+                        <label ><b>language</b></label>
+                        <input type="text" placeholder="Enter language " name="language"  [(ngModel)]="problemservice.CurrentProblem.language"  required>
+  
+                        <label for="lastname"><b>description</b></label>
+                        <textarea  name="description" rows="4" cols="100" [(ngModel)]="problemservice.CurrentProblem.description"></textarea>
+                        <hr>
+                        <button  type="submit" class="registerbtn" (click)="create(problemservice.CurrentProblem)">Save</button>
+                        </div>
+                        
+                    </form>
+                    
+            </div>
+        </div>
+            </div>
+          </div>
+      </div>
+      <hr>
+      
+      <div class="signin" style="text-align:center;padding: 1%">
+  
+          <h1>Admins Panel</h1>
+          </div>
 
   
 

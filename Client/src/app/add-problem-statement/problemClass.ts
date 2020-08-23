@@ -1,4 +1,4 @@
-export class Problem{
+export class Problem1{
     problemId:Number
     problemTitle:String
     problemStatement:String
