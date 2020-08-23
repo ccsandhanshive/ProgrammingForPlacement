@@ -11,23 +11,15 @@ import {ProblemStatementsService} from '../shared/problem-statements.service';
 export class ProblemStatementAdminComponent  {
 
 allProblem: Problem[];
-<<<<<<< HEAD
-showEdit:Boolean
-constructor(public problemStatementsService:ProblemStatementsService) { }
-=======
 allProblem1: Problem[];
 
 
 constructor(public addProblemStatementService:AddProblemStatementService,public problemservice:ProblemStatementsService) { }
->>>>>>> 3a118ef1c9d9ad6e9d07e64ad92b6eb7efdd119b
 
 ngOnInit(): void {
   this.getAlldata();
-  this.showEdit=false
 }
-setShowEditTrue(){
-  this.showEdit=true
-}
+
 getAlldata()
 {
   this.addProblemStatementService.getAllProblem().subscribe(
@@ -91,14 +83,7 @@ Approve(prob:Problem,del:Number){
   this.problemservice.createProblem(prob).subscribe();
   // this.problemservice.CurrentProblem.id=100;
 
-<<<<<<< HEAD
-edit(usr){
-  console.log(usr);
-  this.problemStatementsService.CurrentProblem=Object.assign({},usr);
-  this.showEdit=true
-=======
   this.delete(del);
->>>>>>> 3a118ef1c9d9ad6e9d07e64ad92b6eb7efdd119b
 }
 
 create(CurrentProblem:Problem)

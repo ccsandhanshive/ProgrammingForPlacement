@@ -125,11 +125,6 @@
       "topicLink": "https://www.tutorialspoint.com/data_structures_algorithms/data_structures_algorithms_interview_questions.htm"
     },
     {
-<<<<<<< HEAD
-      "id": 2,
-      "topicName": "String",
-      "topicLink": "String"
-=======
       "id": 3,
       "topicName": "Algorithams",
       "topicLink": "https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/"
@@ -173,7 +168,6 @@
       "id": 11,
       "topicName": "sdas",
       "topicLink": "sd"
->>>>>>> 3a118ef1c9d9ad6e9d07e64ad92b6eb7efdd119b
     }
   ],
   "Problem": [
@@ -272,16 +266,6 @@
     {
       "id": 1,
       "problemTitle": "",
-      "problemStatement": "",
-      "input": "",
-      "output": "",
-      "program": "",
-      "language": "",
-      "description": ""
-    },
-    {
-      "id": 2,
-      "problemTitle": "qwee",
       "problemStatement": "",
       "input": "",
       "output": "",
