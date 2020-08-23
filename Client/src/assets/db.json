@@ -7,6 +7,15 @@
       "email": "sb@gmail.com",
       "password": "asasd",
       "usertype": "Student"
+    },
+    {
+      "id": 2,
+      "firstname": "qwoi",
+      "lastname": "",
+      "email": "",
+      "password": "",
+      "usertype": "Student",
+      "captcha": "No NEED"
     }
   ],
   "Admin": [
@@ -63,6 +72,15 @@
       "password": "hg",
       "usertype": "Admin",
       "captcha": "No NEhjfhh"
+    },
+    {
+      "id": 7,
+      "firstname": "Swapnil",
+      "lastname": "Borase",
+      "email": "swal.com",
+      "password": "",
+      "usertype": "",
+      "captcha": "No NEED"
     }
   ],
   "Company": [
