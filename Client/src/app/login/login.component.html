@@ -8,7 +8,7 @@
 </head>
 <body>
     <!--   -->
-    <div class="formclass" *ngIf="loadlogup" > 
+    <div class="formclass" *ngIf="!loadlogup" > 
                        
             <form >
                 <div class="container">
@@ -31,7 +31,7 @@
                 </div>
                 </div>
                 <div class="container signin">
-                    <a (click)="hidelogin()" routerLink="/logup">Don't have an account? Sign Up.</a>
+                    <a (click)="hidelogin()" >Don't have an account? Sign Up.</a>
                 </div>
                 
                 
@@ -41,14 +41,14 @@
                 </div> -->
             </form>
     </div>
-    <div>
+  <!-- <div>
         <app-display-user-details *ngIf="gotoHome" (load)='hidelogin()'></app-display-user-details>
     </div>
     <div *ngIf="loadoutlet">
         <router-outlet></router-outlet>
-    </div>
-    <div>
-        <!-- <router-outlet *ngIf="!loadlogup"></router-outlet> -->
+    </div>--> 
+    <div *ngIf="loadlogup">
+        <app-log-up ></app-log-up>
     </div>
             
     

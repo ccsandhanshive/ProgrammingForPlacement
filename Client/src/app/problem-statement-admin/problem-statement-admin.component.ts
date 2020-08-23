@@ -11,13 +11,16 @@ import {Location} from '@angular/common'
 export class ProblemStatementAdminComponent  {
 
 allProblem: Problem[];
-
+showEdit:Boolean
 constructor(public problemStatementsService:ProblemStatementsService) { }
 
 ngOnInit(): void {
   this.getAlldata();
+  this.showEdit=false
 }
-
+setShowEditTrue(){
+  this.showEdit=true
+}
 getAlldata()
 {
   this.problemStatementsService.getAllProblem().subscribe(
@@ -45,6 +48,7 @@ delete(id:Number){
 edit(usr){
   console.log(usr);
   this.problemStatementsService.CurrentProblem=Object.assign({},usr);
+  this.showEdit=true
 }
 
 create(CurrentProblem:Problem)

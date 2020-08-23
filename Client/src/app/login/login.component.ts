@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
     //   console.log(data);
     // })
     this.loadoutlet=false;
-    this.loadlogup=true;
+    this.loadlogup=false;
     this.getAllUsersdata();
     
   }
@@ -68,6 +68,7 @@ export class LoginComponent implements OnInit {
        this.loginFlag=true;
        this.checkinsideadminflag=true;
        this.user.emit("Student login")
+       this.loadlogup=true
 
        break;
      }
@@ -81,18 +82,14 @@ export class LoginComponent implements OnInit {
       this.user.emit("Admin login")
       // this.router.navigate(['/userlist']);
       this.gotoHome=true;
-      this.hidelogin1();
 
       break;
     }
-    else{
-     this.loginFlag=false;  
-     // alert('login Failed');
-     
-    }
+  
    
   }
   if(this.loginFlag==false){
+    alert("Incorrect username/password")
     this.user.emit("")
   }
  
@@ -106,12 +103,9 @@ export class LoginComponent implements OnInit {
     
   // }
   hidelogin(){
-    this.loadlogup=false;
+    this.loadlogup=true;
     this.loadoutlet=true;
   }
-  hidelogin1(){
-    this.loadlogup=false;
-    this.loadoutlet=false;
-  }
+
 
 }

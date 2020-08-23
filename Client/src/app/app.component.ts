@@ -20,7 +20,10 @@ export class AppComponent implements OnInit{
     this.login=false
   }
  constructor(){}
- user:any
+ user=''
+ home(){
+   this.user=''
+ }
  setUser(user){
   this.user=user
  }

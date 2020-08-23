@@ -21,7 +21,7 @@ loadlogin:boolean
 constructor( public service:UsersService,private router:Router,@Inject(DOCUMENT) document) { }
 
   ngOnInit(): void {
-    this.loadlogin=true;
+    this.loadlogin=false;
   } 
 
   createUser(currentUser:Users)
@@ -78,8 +78,7 @@ constructor( public service:UsersService,private router:Router,@Inject(DOCUMENT)
   }
 
   gotologin(){
-    this.router.navigate(['/login']);
-    this.loadlogin=false;
+    this.loadlogin=true;
   }
 
   Admin(){
