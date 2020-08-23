@@ -70,25 +70,25 @@
                   <form >
                       <div class="container">
                       <label ><b>problemTitle</b></label>
-                      <input type="text" placeholder="Enter Heading Name" name="Heading"  [(ngModel)]="addProblemStatementService.CurrentProblem.problemTitle"  required>
+                      <input type="text" placeholder="Enter Heading Name" name="Heading"  [(ngModel)]="problemservice.CurrentProblem.problemTitle"  required>
                             
                       <label ><b>problemStatement</b></label>
-                      <textarea  name="problemStatement" rows="4" cols="100" [(ngModel)]="addProblemStatementService.CurrentProblem.problemStatement"></textarea>
+                      <textarea  name="problemStatement" rows="4" cols="100" [(ngModel)]="problemservice.CurrentProblem.problemStatement"></textarea>
                       
                       <label ><b>input</b></label>
-                      <textarea  name="input" rows="4" cols="100" [(ngModel)]="addProblemStatementService.CurrentProblem.input"></textarea>
+                      <textarea  name="input" rows="4" cols="100" [(ngModel)]="problemservice.CurrentProblem.input"></textarea>
 
                       <label ><b>output</b></label>
-                      <textarea  name="output" rows="4" cols="100" [(ngModel)]="addProblemStatementService.CurrentProblem.output"></textarea>
+                      <textarea  name="output" rows="4" cols="100" [(ngModel)]="problemservice.CurrentProblem.output"></textarea>
 
                       <label ><b>program</b></label>
-                      <textarea  name="program" rows="4" cols="100" [(ngModel)]="addProblemStatementService.CurrentProblem.program"></textarea>
+                      <textarea  name="program" rows="4" cols="100" [(ngModel)]="problemservice.CurrentProblem.program"></textarea>
 
                       <label ><b>language</b></label>
-                      <input type="text" placeholder="Enter language " name="language"  [(ngModel)]="addProblemStatementService.CurrentProblem.language"  required>
+                      <input type="text" placeholder="Enter language " name="language"  [(ngModel)]="problemservice.CurrentProblem.language"  required>
 
                       <label for="lastname"><b>description</b></label>
-                      <textarea  name="description" rows="4" cols="100" [(ngModel)]="addProblemStatementService.CurrentProblem.description"></textarea>
+                      <textarea  name="description" rows="4" cols="100" [(ngModel)]="problemservice.CurrentProblem.description"></textarea>
                       <hr>
                       <!-- <button  type="submit" class="registerbtn" (click)="create(problemStatementsService.CurrentProblem)">Save</button> -->
                       </div>
@@ -131,7 +131,7 @@
                             <td>Show/Edit</td>
                             <td>Reject</td>                          
                           </tr>
-                            <tr *ngFor="let prb of allProblem1">
+                            <tr *ngFor="let prb of allProblem">
                               <td>{{prb.problemTitle}}</td>                                      
                               <td>
                                 <a class="btn" (click)="edit(prb)">

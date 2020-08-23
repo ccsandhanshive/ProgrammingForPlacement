@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http'
 import { Observable } from 'rxjs';
-import {Users, Admins} from '../model/users.model'
+import {Users, Admins, LoginStatus} from '../model/users.model'
 const Headeroption={
   headers: new HttpHeaders({'content-type':'application/json'})
 }
@@ -12,7 +12,7 @@ export class UsersService {
   allUsers: Users[];
 UsersURL='http://localhost:3000/User';
 AdminURL='http://localhost:3000/Admin';
-
+statusURL='http://localhost:3000/Status';
 currentUser: Users ={
     id: null,
     firstname: '',
@@ -33,10 +33,22 @@ currentAdmin: Admins ={
     captcha:''
 
 }
-
+LoginStatus:LoginStatus={
+  id:null,
+  username:'',
+  userType:'',
+  status:''
+}
   constructor(
     private http:HttpClient
   ) { }
+createStatus(LoginStatus:LoginStatus):Observable<LoginStatus>{
+  return this.http.post<LoginStatus>(this.statusURL,LoginStatus,Headeroption)
+}
+UpdateStatus(LoginStatus:LoginStatus):Observable<LoginStatus>
+{
+  return this.http.put<LoginStatus>(this.UsersURL+ '/' +LoginStatus.id,LoginStatus,Headeroption);
+}
 
   getAllUsers():Observable<Users[]>{
     return this.http.get<Users[]>(this.UsersURL,Headeroption);

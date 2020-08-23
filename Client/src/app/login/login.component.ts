@@ -2,7 +2,7 @@ import { Component, OnInit,Output, EventEmitter } from '@angular/core';
 import { LogUpService } from '../log-up/log-up.service';
 import { UsersService } from '../shared/users.service';
 import { Users } from '../model/users.model';
-import { Admins } from '../model/users.model';
+import { Admins , LoginStatus} from '../model/users.model';
 import {Router} from '@angular/router'
 import {AppComponent} from '../app.component'
 @Component({
@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit {
   gotoHome:boolean=false;
 
   constructor(private LogUpService:LogUpService,private userService:UsersService,private router:Router) {  }
-
   ngOnInit(): void {
     // this.LogUpService.$logup
     // .subscribe((data)=>{
@@ -53,7 +52,7 @@ export class LoginComponent implements OnInit {
     )
   }
 
-  lgbtnclick() {
+  lgbtnclick(status:LoginStatus) {
     // this.service.registerdata()
     var person = { 
       a:this.email,
@@ -67,8 +66,9 @@ export class LoginComponent implements OnInit {
       //  alert('login Successful');
        this.loginFlag=true;
        this.checkinsideadminflag=true;
+       this.userService.LoginStatus.status="online"
        this.user.emit("Student login")
-       this.loadlogup=true
+       this.loadlogup=false
 
        break;
      }
@@ -106,6 +106,7 @@ export class LoginComponent implements OnInit {
     this.loadlogup=true;
     this.loadoutlet=true;
   }
+ 
+  }
 
 
-}

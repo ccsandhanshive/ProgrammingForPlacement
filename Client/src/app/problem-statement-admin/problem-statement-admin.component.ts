@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Problem} from '../model/problem.model';
-import {AddProblemStatementService} from '../shared/add-problem-statement.service';
-import {ProblemStatementsService} from '../shared/problem-statements.service';
-// import {Location} from '@angular/common';
+import {Problem} from '../model/problem.model'
+// import {AddProblemStatementService} from '../shared/add-problem-statement.service'
+import {ProblemStatementsService} from '../shared/problem-statements.service'
+import {Location} from '@angular/common'
 @Component({
   selector: 'app-problem-statement-admin',
   templateUrl: './problem-statement-admin.component.html',
@@ -11,38 +11,19 @@ import {ProblemStatementsService} from '../shared/problem-statements.service';
 export class ProblemStatementAdminComponent  {
 
 allProblem: Problem[];
-<<<<<<< HEAD
 showEdit:Boolean
-constructor(public problemStatementsService:ProblemStatementsService) { }
-=======
-allProblem1: Problem[];
-
-
-constructor(public addProblemStatementService:AddProblemStatementService,public problemservice:ProblemStatementsService) { }
->>>>>>> 3a118ef1c9d9ad6e9d07e64ad92b6eb7efdd119b
+constructor(public problemservice:ProblemStatementsService) { }
 
 ngOnInit(): void {
   this.getAlldata();
   this.showEdit=false
 }
-setShowEditTrue(){
-  this.showEdit=true
-}
+setShowEditTrue
 getAlldata()
 {
-  this.addProblemStatementService.getAllProblem().subscribe(
-    (data:Problem[]) =>{
-      this.allProblem=data;
-      console.log(this.allProblem)
-      // this.allUsers.forEach(element => {
-      // console.log(element.firstname);
-        
-      // });
-    }
-  )
   this.problemservice.getAllProblem().subscribe(
     (data:Problem[]) =>{
-      this.allProblem1=data;
+      this.allProblem=data;
       console.log(this.allProblem)
       // this.allUsers.forEach(element => {
       // console.log(element.firstname);
@@ -54,15 +35,6 @@ getAlldata()
 
 delete(id:Number){
   console.log(id);
-  this.addProblemStatementService.deleteProblem(id).subscribe(
-    (data:Problem) =>{
-      this.getAlldata();
-      // console.log(this.allUsers)
-    }
-  )
-}
-delete_Problem(id:Number){
-  console.log(id);
   this.problemservice.deleteProblem(id).subscribe(
     (data:Problem) =>{
       this.getAlldata();
@@ -71,34 +43,9 @@ delete_Problem(id:Number){
   )
 }
 
-show(prob){
-  console.log(prob);
-  this.addProblemStatementService.CurrentProblem=Object.assign({},prob);
-  
-}
-edit(prob){
-  console.log(prob);
-  this.problemservice.CurrentProblem=Object.assign({},prob);
-  
-}
-
-Approve(prob:Problem,del:Number){
-  console.log('Create');
-  
-  var a:Number=Number(prob.id)+Math.random()*10;
-  prob.id=100+Number(a);
-  console.log(a);
-  this.problemservice.createProblem(prob).subscribe();
-  // this.problemservice.CurrentProblem.id=100;
-
-<<<<<<< HEAD
 edit(usr){
   console.log(usr);
-  this.problemStatementsService.CurrentProblem=Object.assign({},usr);
-  this.showEdit=true
-=======
-  this.delete(del);
->>>>>>> 3a118ef1c9d9ad6e9d07e64ad92b6eb7efdd119b
+  this.problemservice.CurrentProblem=Object.assign({},usr);
 }
 
 create(CurrentProblem:Problem)

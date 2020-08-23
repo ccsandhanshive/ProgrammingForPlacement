@@ -19,3 +19,11 @@ export class Admins{
     captcha:String;
 
 }
+export class LoginStatus{
+    id:Number
+    username:String
+    userType:String
+    status:String
+}
+
+
