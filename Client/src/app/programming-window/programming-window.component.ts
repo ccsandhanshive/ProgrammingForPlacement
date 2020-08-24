@@ -10,9 +10,11 @@ constructor() { }
 programmingLanguage:any;
 programVisibility=false
 back=false
+windowVisibility:Boolean
 compilarLink="https://www.onlinegdb.com/"
 ngOnInit(): void {
 this.back=false
+this.windowVisibility=true
 this.programVisibility=false
   }
 setProgramVisibility(){
@@ -20,6 +22,7 @@ setProgramVisibility(){
 }
 setBack(){
   this.back=true
+  this.windowVisibility=false
 }
 }
 

@@ -8,7 +8,7 @@
 </head>
 <body>
     <!--   -->
-    <div class="formclass" *ngIf="!loadlogup" > 
+    <div class="formclass" *ngIf="loadlogup=='false'" > 
                        
             <form >
                 <div class="container">
@@ -16,13 +16,13 @@
                 <p>Please fill in the Login Details</p>
                 <hr>
                 <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" [(ngModel)]="userService.LoginStatus.username" [(ngModel)]="email"  required>
+                <input type="text" placeholder="Enter Email" name="email"  [(ngModel)]="email"  [(ngModel)]="userService.LoginStatus.username"required>
             
                 <label for="psw"><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" name="psw"  [(ngModel)]="psw"  required>
                 <div class="row">
                     <div class="col col-6">
-                        <button (click)="lgbtnclick(userService.LoginStatus)" type="submit" class="registerbtn">Login</button>
+                        <button (click)="lgbtnclick()" type="submit" class="registerbtn">Login</button>
                     </div>
                     <div class="col col-6" style="text-align:right;padding-top:20px;">
                         <a (click)="hidelogin()" routerLink="/forgetpass" >Forget Password</a>
@@ -47,7 +47,7 @@
     <div *ngIf="loadoutlet">
         <router-outlet></router-outlet>
     </div>--> 
-    <div *ngIf="loadlogup">
+    <div *ngIf="loadlogup==='true'">
         <app-log-up ></app-log-up>
     </div>
             

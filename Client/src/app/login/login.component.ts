@@ -11,7 +11,7 @@ import {AppComponent} from '../app.component'
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
- @Output() user=new EventEmitter<String>();
+ @Output() user=new EventEmitter<any>();
   allUsers: Users[];
   allAdmins:Admins[];
 
@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   psw:String="";
   loginFlag=false;
  
-  loadlogup:boolean;
+  loadlogup:String;
   loadoutlet:boolean;
   checkinsideadminflag:boolean=false;
   gotoHome:boolean=false;
@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
     //   console.log(data);
     // })
     this.loadoutlet=false;
-    this.loadlogup=false;
+    this.loadlogup="false";
     this.getAllUsersdata();
     
   }
@@ -52,7 +52,7 @@ export class LoginComponent implements OnInit {
     )
   }
 
-  lgbtnclick(status:LoginStatus) {
+  lgbtnclick() {
     // this.service.registerdata()
     var person = { 
       a:this.email,
@@ -66,10 +66,9 @@ export class LoginComponent implements OnInit {
       //  alert('login Successful');
        this.loginFlag=true;
        this.checkinsideadminflag=true;
-       this.userService.LoginStatus.status="online"
-       this.user.emit("Student login")
-       this.loadlogup=false
-
+       this.user.emit(val)
+       this.loadlogup="non"
+      
        break;
      }
     
@@ -79,7 +78,7 @@ export class LoginComponent implements OnInit {
     if(person.a==val.email && person.b==val.password)
     {
       this.loginFlag=true;  
-      this.user.emit("Admin login")
+      this.user.emit(val)
       // this.router.navigate(['/userlist']);
       this.gotoHome=true;
 
@@ -103,7 +102,7 @@ export class LoginComponent implements OnInit {
     
   // }
   hidelogin(){
-    this.loadlogup=true;
+    this.loadlogup="true";
     this.loadoutlet=true;
   }
  

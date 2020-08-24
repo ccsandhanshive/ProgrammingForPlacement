@@ -15,13 +15,13 @@ import { DOCUMENT } from '@angular/common';
 })
 
 export class LogUpComponent implements OnInit {
-loadlogin:boolean
+loadlogin:String
   
  
 constructor( public service:UsersService,private router:Router,@Inject(DOCUMENT) document) { }
 
   ngOnInit(): void {
-    this.loadlogin=false;
+    this.loadlogin="false";
   } 
 
   createUser(currentUser:Users)
@@ -59,7 +59,8 @@ constructor( public service:UsersService,private router:Router,@Inject(DOCUMENT)
       }
         
     }
-    
+    this.loadlogin="";
+    window.location.reload()
   }
   createUsr(usr :Users)
   {
@@ -78,7 +79,7 @@ constructor( public service:UsersService,private router:Router,@Inject(DOCUMENT)
   }
 
   gotologin(){
-    this.loadlogin=true;
+    this.loadlogin="true";
   }
 
   Admin(){

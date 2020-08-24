@@ -6,12 +6,13 @@ import { UsersService } from './shared/users.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  
+  user:any
   load:boolean=true;
   title = 'ProgrammingForPlacement';
   login=false;
   ngOnInit(): void {
   this.login=false
+  this.user=""
   }
   setLogin(){
     this.login=true
@@ -20,11 +21,12 @@ export class AppComponent implements OnInit{
     this.login=false
   }
  constructor(){}
- user=''
+ 
  home(){
-   this.user=''
+   this.user=""
  }
  setUser(user){
   this.user=user
+  this.login=false
  }
 }

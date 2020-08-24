@@ -7,6 +7,7 @@
 <link rel="canonical" href="http://www.alessioatzeni.com/wp-content/tutorials/html-css/CSS3-Menu-Navigation-Effect/index.html" />
 </head>
 <body>
+    <div class="bgimg"></div>
 <h1>GITSYS<small>Programming for placement</small></h1>
 <div class="container" style="margin: auto; text-align: center;font-family:verdana; font-size: large;"> 
     <div class="container">   
@@ -20,7 +21,9 @@
     </div>  
    
 <div class="container" style="font-size: medium;" >
-<ul id="paneltwo" *ngIf="user=='Student login'">
+<ul id="paneltwo" *ngIf="user.usertype=='Student'">
+    <p>{{user.firstname}}&nbsp;{{user.lastname}}</p>
+    <p>{{user.email}}</p>
     <div class="signin" style="text-align:center;padding: 1%">
         <h1>Student Panel</h1>
         </div>
@@ -28,10 +31,12 @@
 <li class="linkOne" style="height:50px;"><a routerLink="PlacementImportantTopicsComponent" (click)="setLoginFalse()">Placements Important Topics</a></li>
 <li class="linkTwo" style="height:50px;"><a routerLink="PlacementTipsComponent" (click)="setLoginFalse()">Tips for placement</a></li>
 <li class="linkThree" style="height:50px;"><a routerLink="CompanyInformationComponent" (click)="setLoginFalse()">Company Information</a></li>
-<li class="mask" style="height:50px;"><a (click)="home()">Log out</a></li>
+<li class="mask" style="height:50px;"><a href="#about" (click)="home()">Log out</a></li>
 </ul>
-<ul id="paneltwo" style="font-size: medium;" *ngIf="user=='Admin login'">
+<ul id="paneltwo" style="font-size: medium;" *ngIf="user.usertype=='Admin'">
     <div class="signin" style="text-align:center;padding: 1%">
+        <p>{{user.firstname}}&nbsp;{{user.lastname}}</p>
+        <p>{{user.email}}</p>
         <h1>Admins Panel</h1>
         </div>
     <li class="mask" style="height:50px;"><a routerLink="ProblemStatementAdminComponent" (click)="setLoginFalse()">Programming For Placements</a></li>
@@ -39,7 +44,7 @@
     <li class="linkTwo" style="height:50px;"><a routerLink="PlacementTipsAdminComponent" (click)="setLoginFalse()">Tips for placement</a></li>
     <li class="linkThree" style="height:50px;"><a routerLink="CompanyDetailsAdminComponent" (click)="setLoginFalse()">Company Information</a></li>
     <li class="linkFour" style="height:50px;"><a routerLink="WebinarAdsAdminComponent"(click)="setLoginFalse()">Webinars control</a></li>
-    <li class="mask" style="height:50px;"><a (click)="home()">Log out</a></li>
+    <li class="mask" style="height:50px;"><a href="#about" (click)="home()">Log out</a></li>
     </ul>
 </div>
 </div>
@@ -53,7 +58,7 @@
 <section id="Login">
     <app-login (user)='setUser($event)' *ngIf="login"></app-login>
 </section>
-<section class="footer-distributed" id="about" style="font-size:15px;text-align: center;">
+<section class="footer-distributed" id="about" style="font-size:15px;text-align: center;background-color:black;">
  
     <div class="footer-left">
 

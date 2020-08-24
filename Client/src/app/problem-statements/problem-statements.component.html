@@ -1,5 +1,5 @@
 <!-- *ngIf="!Ava" -->
-<div  style="color:black">
+<div  style="color:black" *ngIf="!Ava">
 <table class="blueTable">
   <thead>
     <th>Problem Id</th>
@@ -7,18 +7,18 @@
     <th></th>
   </thead>
   <tbody>
-      <tr *ngFor="let p of allProblem">
+      <tr *ngFor="let p of problems">
         <td>{{p.id}}</td>
         <td>{{p.problemTitle}}</td>      
-        <td style="text-align: center;"><button class="myButton" >More</button></td>
-        <!-- (click)="setId(p.problemId)" -->
+       <td style="text-align: center;"><button class="myButton"(click)="setId(p.id)" >More</button></td>
+        <!--  -->
       </tr>
   </tbody>
 </table>
 </div>
-<!-- *ngIf="Ava" -->
-<div >
-   <!-- <app-programming-window  [problem]="problem" ></app-programming-window>   -->
+<!--  -->
+<div *ngIf="Ava" >
+   <app-programming-window  [problem]="problem" ></app-programming-window>   
   </div>
 
 
