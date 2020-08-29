@@ -10,6 +10,7 @@ import {Webad} from "../model/webad.model"
 export class WebinarAdsComponent implements OnInit {
   // Wdata:any;
 
+  homeSlider={items:4 ,dots:true,nav:true,loop:true,autoplay:true,center:true};
   allWebad:Webad[];
   
   constructor(private webinarAdsService:WebinarAdsService) { }

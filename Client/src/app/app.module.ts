@@ -23,7 +23,9 @@ import { CompanyDetailsAdminComponent } from './company-details-admin/company-de
 import { PlacementImportantTopicsAdminComponent } from './placement-important-topics-admin/placement-important-topics-admin.component';
 import { PlacementTipsAdminComponent } from './placement-tips-admin/placement-tips-admin.component';
 import { WebinarAdsAdminComponent } from './webinar-ads-admin/webinar-ads-admin.component';
-import { ProblemStatementAdminComponent } from './problem-statement-admin/problem-statement-admin.component'
+import { ProblemStatementAdminComponent } from './problem-statement-admin/problem-statement-admin.component';
+import {OwlModule} from 'ngx-owl-carousel';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +53,8 @@ import { ProblemStatementAdminComponent } from './problem-statement-admin/proble
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    OwlModule
 
 
   ],

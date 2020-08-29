@@ -214,7 +214,17 @@
   ],
   "Problem": [
     {
-      "id": 106.31765036346185,
+      "id": 209.1896535860364,
+      "problemTitle": " Build Order\"",
+      "problemStatement": "Given a list of packages and their dependencies, determine a valid build order",
+      "input": "[[[], [0], [1], [2], [3]],[[], [0], [0], [1, 2], [1, 2, 3]],[[3], [0], [4], [], [1]],[[3], [0, 3], [0, 1, 3], [], [1, 2, 3]]]",
+      "output": "[[0, 1, 2, 3, 4],[0, 1, 2, 3, 4],[3, 0, 1, 4, 2],[3, 0, 1, 2, 4]]",
+      "program": "",
+      "language": "python",
+      "description": ""
+    },
+    {
+      "id": 321.5447901335357,
       "problemTitle": "\"Is anagram\"",
       "problemStatement": "Given two strings, write a function to determine whether they are anagrams.",
       "input": "[\"A\", \"B\"],[\"ab\", \"ba\"],[\"AB\", \"ab\"]",
@@ -224,21 +234,11 @@
       "description": ""
     },
     {
-      "id": 107.31765036346185,
+      "id": 318.77470488697713,
       "problemTitle": "Big Int Mod",
       "problemStatement": "\"Given a list of bytes a, each representing one byte of a larger integer (ie. {0x12, 0x34, 0x56, 0x78} represents the integer 0x12345678), and an integer b, find a % b.\"",
       "input": "[[big_int_mod(None, 1), 0],[big_int_mod([], 1), 0],[big_int_mod([15], 10), 5],[big_int_mod([0x03, 0xED], 10), 5]]\"",
       "output": " [\"Null value.\",\"Empty array.\",\"Single element array.\",\"Multi-element array\"]",
-      "program": "",
-      "language": "python",
-      "description": ""
-    },
-    {
-      "id": 108.31765036346185,
-      "problemTitle": " Build Order\"",
-      "problemStatement": "Given a list of packages and their dependencies, determine a valid build order",
-      "input": "[[[], [0], [1], [2], [3]],[[], [0], [0], [1, 2], [1, 2, 3]],[[3], [0], [4], [], [1]],[[3], [0, 3], [0, 1, 3], [], [1, 2, 3]]]",
-      "output": "[[0, 1, 2, 3, 4],[0, 1, 2, 3, 4],[3, 0, 1, 4, 2],[3, 0, 1, 2, 4]]",
       "program": "",
       "language": "python",
       "description": ""
