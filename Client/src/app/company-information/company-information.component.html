@@ -5,7 +5,7 @@
 <div style="background-color: white;width:100%;">
 <table >
     <tbody>
-      
+      <td>
 <div class="demotext">
     <table class="blueTable">
       <thead>
@@ -17,55 +17,62 @@
         <tr *ngFor="let c of allCompany">
           <td>{{c.id}}</td>
           <td>{{c.companyName}}</td>     
-          <td><button class="btn btn-primary" (click)="edit(c)">More</button></td> 
+          <td><button class="myButton" (click)="edit(c)">More</button></td> 
          <!-- <td><app-company-details [id]='c.companyId' (company)='getCompanyDetails($event)'></app-company-details></td> -->
         </tr>
       </tbody>
     </table>
   </div>
+  </td>
+  <td>
+    <div class="demotext" *ngIf="available">
+      <table class="blueTable"  >
+        <thead>
+          <th>Company details</th>
+        </thead>
+        <tbody style="text-align: center;">
+          <tr>
+              <td>Image</td>
+              <td><img [src]="companyService.CurrentCompany.imageUrl"  width="200" height="200"/></td></tr>
+          <tr>
+              <td>Company Name</td>
+              <td>{{companyService.CurrentCompany.companyName}}</td>
+          </tr>
+          <tr>
+              <td>Package Per Anum In lakes</td>
+              <td>{{companyService.CurrentCompany.package}}</td>
+          </tr>
+          <tr>
+              <td>Eligible Passing Year</td>
+              <td>{{companyService.CurrentCompany.passingYear}}</td>
+          </tr>
+          <tr>
+              <td>Eligibal Branches</td>
+              <td>{{companyService.CurrentCompany.eligibalBranches}}</td>
+          </tr>
+          <tr>
+              <td>Job Description</td>
+              <td >{{companyService.CurrentCompany.jobDescription}}</td>
+          </tr>
+          <tr><td></td>
+            <td><a href="https://www.bitrix24.com/uses/free-online-registration-form-creator.php" class="myButton">Apply now</a></td>
+  
+              <!-- <td><a [href]="companyService.CurrentCompany.registrationLink" class="myButton">Apply now</a></td> -->
+          </tr>
+        </tbody>
+        </table>
+    </div>
+
+
+    </td>
 </tbody>
+
 </table>
+
 </div>
   <br>
   <br>
   
-  <div class="demotext" *ngIf="available">
-    <table class="blueTable"  >
-      <thead>
-        <th>Company details</th>
-      </thead>
-      <tbody style="text-align: center;">
-        <tr>
-            <td>Image</td>
-            <td><img [src]="companyService.CurrentCompany.imageUrl"  width="200" height="200"/></td></tr>
-        <tr>
-            <td>Company Name</td>
-            <td>{{companyService.CurrentCompany.companyName}}</td>
-        </tr>
-        <tr>
-            <td>Package Per Anum In lakes</td>
-            <td>{{companyService.CurrentCompany.package}}</td>
-        </tr>
-        <tr>
-            <td>Eligible Passing Year</td>
-            <td>{{companyService.CurrentCompany.passingYear}}</td>
-        </tr>
-        <tr>
-            <td>Eligibal Branches</td>
-            <td>{{companyService.CurrentCompany.eligibalBranches}}</td>
-        </tr>
-        <tr>
-            <td>Job Description</td>
-            <td >{{companyService.CurrentCompany.jobDescription}}</td>
-        </tr>
-        <tr><td></td>
-          <td><a href="https://www.bitrix24.com/uses/free-online-registration-form-creator.php" class="myButton">Apply now</a></td>
-
-            <!-- <td><a [href]="companyService.CurrentCompany.registrationLink" class="myButton">Apply now</a></td> -->
-        </tr>
-      </tbody>
-      </table>
-  </div>
   </div>
 
 

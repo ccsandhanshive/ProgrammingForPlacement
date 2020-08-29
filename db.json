@@ -16,6 +16,15 @@
       "password": "",
       "usertype": "Student",
       "captcha": "No NEED"
+    },
+    {
+      "id": 3,
+      "firstname": "chetan",
+      "lastname": "sandhanshive",
+      "email": "student@gmail.com",
+      "password": "12345",
+      "usertype": "Student",
+      "captcha": "No NEED"
     }
   ],
   "Admin": [
@@ -126,6 +135,15 @@
       "password": "",
       "usertype": "",
       "captcha": "No NEED"
+    },
+    {
+      "id": 13,
+      "firstname": "chetan",
+      "lastname": "sandhanshive",
+      "email": "admin@gmail.com",
+      "password": "12345",
+      "usertype": "Admin",
+      "captcha": "No NEED"
     }
   ],
   "Company": [
@@ -158,6 +176,46 @@
       "eligibalBranches": "      \"B.E.\",                 \"B.Tech\",                 \"BCA\",                 \"Bsc IT\",                 \"Bsc.CS\"",
       "jobDescription": "    \"Excellent communication Skills (English & one of the language mentioned above)\",                 \"Should have strong grip in one of the language mentioned (ability to read, write and speak)\",                 \"Analytical & Presentation skills\",                 \"Excellent leadership skills\",                 \"Should be strong in MS Office\",                 \"Note: MALE CANDIDATES are preferred, Females With Bangla Language Preferred.\"",
       "registrationLink": "https://forms.gle/VDiSogsTCS3RFepP9"
+    },
+    {
+      "id": 5,
+      "imageUrl": "assets/Bosch.jpeg",
+      "companyName": "Bosch Chassis Systems India Pvt Limited",
+      "package": null,
+      "passingYear": "2020",
+      "eligibalBranches": "Mechanical &  Electronic and Communication",
+      "jobDescription": " We would be kick-starting our campus hiring process for 2020 passing out batch. We have partnered with Co Cubes (marked in Cc), as our online assessment partner. We request your entire support to them in terms of logistics and providing the information as needed. We have also attached the student information sheet where we would like the information of eligible students (as per the criteria and details mentioned below) who will participate in this process.     Resume Selection:  1.     Mechanical  2.     Electronic and Communication  3.     Production  Ø  Candidate should have 60% and above in all 10th, 12th and in B.E/ B. Tech (all semesters).  Ø  No backlogs, No history of backlogs and no grace Marks.  Ø  The candidate passed B.E/B.Tech in 2020 only are eligible  Selectin Method: Online test -> Personal Interview  (Technical and HR together)  Timelines – will be shared by co cubes (Aon) soon.  We would like college to take a caution of not sharing the data of student who are not meeting with our eligibility criteria.",
+      "registrationLink": "https://forms.gle/JvJ7CRe7YU7wBDHu5"
+    },
+    {
+      "id": 6,
+      "imageUrl": "assets/Kinlong.jpeg",
+      "companyName": "Kinlong Hardware India Private Limited ",
+      "package": "17000",
+      "passingYear": "2020",
+      "eligibalBranches": " B.E.(Mechanical/Civil)",
+      "jobDescription": "- Target clients : Architects, Builders, and Developers, project Management Consultants (PMC) Contractors, Consultants.  - Searching on internet and making Cold calls for client Appointment.  - Meeting purchase manager, Technical Design-Head Or Director etc.. to get information about on-Going projects.  - Seeking the scope of the business in that project with regards to glass, Aluminum, UPVC, steel & Wood.  - Providing Necessary technical support & Quotations to Clients.  - Negotiating with clients on prices and getting orders, then placing order from Head Quarter as Well as warehouse.  - Order follow up & Payments.",
+      "registrationLink": "https://forms.gle/jWS78uCMZDYBUSQt9"
+    },
+    {
+      "id": 7,
+      "imageUrl": "assets/SAAMA.jpeg",
+      "companyName": "SAAMA Technologies, Pune",
+      "package": "4,00,000",
+      "passingYear": "2020",
+      "eligibalBranches": "all",
+      "jobDescription": "A Leading Online Assessment, Recruitment & Skills Dev Company",
+      "registrationLink": "https://bit.ly/31vDZQK "
+    },
+    {
+      "id": 8,
+      "imageUrl": "assets/Reliance.jpeg",
+      "companyName": "Reliance JIO",
+      "package": "3.5",
+      "passingYear": "2020",
+      "eligibalBranches": "Any Stream",
+      "jobDescription": "  Assistant Manager ( Jio Fiber Associat)",
+      "registrationLink": "https://forms.gle/aPFJyAUyj72UJ2Jj8"
     }
   ],
   "Topic": [
@@ -214,18 +272,8 @@
   ],
   "Problem": [
     {
-      "id": 209.1896535860364,
-      "problemTitle": " Build Order\"",
-      "problemStatement": "Given a list of packages and their dependencies, determine a valid build order",
-      "input": "[[[], [0], [1], [2], [3]],[[], [0], [0], [1, 2], [1, 2, 3]],[[3], [0], [4], [], [1]],[[3], [0, 3], [0, 1, 3], [], [1, 2, 3]]]",
-      "output": "[[0, 1, 2, 3, 4],[0, 1, 2, 3, 4],[3, 0, 1, 4, 2],[3, 0, 1, 2, 4]]",
-      "program": "",
-      "language": "python",
-      "description": ""
-    },
-    {
-      "id": 321.5447901335357,
-      "problemTitle": "\"Is anagram\"",
+      "id": 1,
+      "problemTitle": "Is anagram",
       "problemStatement": "Given two strings, write a function to determine whether they are anagrams.",
       "input": "[\"A\", \"B\"],[\"ab\", \"ba\"],[\"AB\", \"ab\"]",
       "output": "\"[\"Empty string s1='' and string s2='' are anagrams\",\"Empty string s1='A' and string s2='B' are not anagrams\",\"Empty string s1='ab' and string s2='ba' are anagrams\",\"Empty string s1='AB' and string s2='ab' are anagrams\"]",
@@ -234,13 +282,133 @@
       "description": ""
     },
     {
-      "id": 318.77470488697713,
+      "id": 2,
       "problemTitle": "Big Int Mod",
       "problemStatement": "\"Given a list of bytes a, each representing one byte of a larger integer (ie. {0x12, 0x34, 0x56, 0x78} represents the integer 0x12345678), and an integer b, find a % b.\"",
       "input": "[[big_int_mod(None, 1), 0],[big_int_mod([], 1), 0],[big_int_mod([15], 10), 5],[big_int_mod([0x03, 0xED], 10), 5]]\"",
       "output": " [\"Null value.\",\"Empty array.\",\"Single element array.\",\"Multi-element array\"]",
       "program": "",
       "language": "python",
+      "description": ""
+    },
+    {
+      "id": 3,
+      "problemTitle": " Build Order",
+      "problemStatement": "Given a list of packages and their dependencies, determine a valid build order",
+      "input": "[[[], [0], [1], [2], [3]],[[], [0], [0], [1, 2], [1, 2, 3]],[[3], [0], [4], [], [1]],[[3], [0, 3], [0, 1, 3], [], [1, 2, 3]]]",
+      "output": "[[0, 1, 2, 3, 4],[0, 1, 2, 3, 4],[3, 0, 1, 4, 2],[3, 0, 1, 2, 4]]",
+      "program": "",
+      "language": "python",
+      "description": ""
+    },
+    {
+      "id": 4,
+      "problemTitle": " Clock Angle",
+      "problemStatement": " Given two integers, an hour and a minute, write a function to \n calculate the angle between the two hands on a clock representing that time.",
+      "input": "[[3, 40],[1, 20],[5, 15]]",
+      "output": "[130,80,67.5]",
+      "program": "    public static double clockAngle(int hour, int minutes) {\n        final double MINUTES_PER_HOUR = 60;\n        final double DEGREES_PER_MINUTE = 360 / MINUTES_PER_HOUR;\n        final double DEGREES_PER_HOUR = 360 / 12;\n\n        double minuteAngle = minutes * DEGREES_PER_MINUTE;\n        double hourAngle = hour * DEGREES_PER_HOUR + (minutes / MINUTES_PER_HOUR) * DEGREES_PER_HOUR;\n\n        double diff = Math.abs(minuteAngle - hourAngle);\n        if (diff > 180) {\n            return 360 - diff;\n        }\n        return diff;\n    }",
+      "language": "java",
+      "description": ""
+    },
+    {
+      "id": 5,
+      "problemTitle": "FizzBuzz",
+      "problemStatement": " Output numbers from 1 to x. If the number is divisible by 3, replace it with “Fizz”. If it is divisible by 5, replace it with “Buzz”. If it is divisible by 3 and 5 replace it with “FizzBuzz”.",
+      "input": "[1,3,5,9,15]",
+      "output": " [\"1\",\"2\",\"Fizz\",\"Buzz\",\"Fizz\",\"FizzBuzz\"]",
+      "program": "    public static String fizzBuzz(int i) {\n        if (i % 3 == 0 && i % 5 == 0) {\n            return \"FizzBuzz\";\n        } else if (i % 3 == 0) {\n            return \"Fizz\";\n        } else if (i % 5 == 0) {\n            return \"Buzz\";\n        } else {\n            return Integer.toString(i);\n        }\n    }",
+      "language": "java",
+      "description": ""
+    },
+    {
+      "id": 6,
+      "problemTitle": "Integer to Roman Numerals",
+      "problemStatement": "Write a function to convert an integer into its roman numeral representation",
+      "input": "  [1,4,6,11,49,2020]",
+      "output": "  [\"I\",\"IV\",\"VI\",\"XI\",\"XLIX\",\"MMXX\"]",
+      "program": "    public static String fizzBuzz(int i) {\n        if (i % 3 == 0 && i % 5 == 0) {\n            return \"FizzBuzz\";\n        } else if (i % 3 == 0) {\n            return \"Fizz\";\n        } else if (i % 5 == 0) {\n            return \"Buzz\";\n        } else {\n            return Integer.toString(i);\n        }\n    }",
+      "language": "java",
+      "description": "//Initialisation\n    private static final String[] numerals = \n        new String[]{\"M\", \"CM\", \"D\", \"CD\", \"C\", \"XC\", \"L\", \"XL\", \"X\", \"IX\", \n        \"V\", \"IV\", \"I\"};\n    private static final int[] values =\n        new int[]{1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1};\n    \n//Function   \n    public static String integerToRoman(int value) {\n        if (value > 3999 || value < 1) throw new IllegalArgumentException();\n        \n        StringBuilder numeral = new StringBuilder();\n        int i = 0;\n        while (value > 0) {\n            if (value - values[i] >= 0) {\n                numeral.append(numerals[i]);\n                value -= values[i];\n            } else {\n                i++;\n            }\n        }\n        \n        return numeral.toString();\n    }"
+    },
+    {
+      "id": 7,
+      "problemTitle": "String compression",
+      "problemStatement": "Given a string, write a function to compress it by shortening every  sequence of the same character to that character followed by the number of repetitions. If the compressed string is longer than the original, you should return the original string.",
+      "input": "   [\"a\",\"aaa\",\"aaabbb\",\"aaabccc\"]",
+      "output": "   [\"a\",\"a3\",\"a3b3\",\"a3b1c3\"]",
+      "program": "    public static String compress(String s){ \n        String out = \"\";\n        int sum = 1;\n        for (int i = 0; i < s.length() - 1; i++) {\n            if (s.charAt(i) == s.charAt(i+1)) {\n                sum++;\n            } else {\n                out = out + s.charAt(i) + sum;\n                sum = 1;\n            }\n        }\n        out = out + s.charAt(s.length() - 1) + sum;\n        return out.length() < s.length() ? out : s;\n    }",
+      "language": "java",
+      "description": ""
+    },
+    {
+      "id": 8,
+      "problemTitle": "Number of ones in binary representation",
+      "problemStatement": "Given an integer, write a function to compute the number of ones in the binary representation of the number.",
+      "input": "[5,12,255,256]",
+      "output": "   [2, 2,8,1]",
+      "program": "  public static int onesInBinary(int x) {\n        int sum = 0;\n        while (x > 0) {\n            sum += x & 1;\n            x >>= 1;\n        }\n        return sum;",
+      "language": "java",
+      "description": ""
+    },
+    {
+      "id": 9,
+      "problemTitle": "Matrix Product",
+      "problemStatement": "Given a matrix, find the path from top left to bottom right with the greatest product by moving only down and right.",
+      "input": "[[[1,2,3], [4, 5, 6], [7, 8, 9]],[[-1,2,3], [4, 5, 6], [7, 8, 9]],[[-1,2,3], [4, 5, -6], [7, 8, 9]]]",
+      "output": "[2016,-324,1080]",
+      "program": "    public static int matrixProduct(int[][] matrix) {\n        if (matrix.length == 0 || matrix[0].length == 0) return 0;\n        int[][] maxCache = new int[matrix.length][matrix[0].length];\n        int[][] minCache = new int[matrix.length][matrix[0].length];\n        for (int i = 0; i < matrix.length; i++) {\n            for (int j = 0; j < matrix[0].length; j++) {\n                int maxVal = Integer.MIN_VALUE;\n                int minVal = Integer.MAX_VALUE;\n                if (i == 0 && j == 0) {\n                    maxVal = matrix[i][j];\n                    minVal = matrix[i][j];\n                }\n                \n                if (i > 0) {\n                    int tempMax = Math.max(matrix[i][j] * maxCache[i-1][j], matrix[i][j] * minCache[i-1][j]);\n                    maxVal = Math.max(tempMax, maxVal);\n                    int tempMin = Math.min(matrix[i][j] * maxCache[i-1][j], matrix[i][j] * minCache[i-1][j]);\n                    minVal = Math.min(tempMin, minVal);\n                }\n                \n                if (j > 0) {\n                    int tempMax = Math.max(matrix[i][j] * maxCache[i][j-1], matrix[i][j] * minCache[i][j-1]);\n                    maxVal = Math.max(tempMax, maxVal);\n                    int tempMin = Math.min(matrix[i][j] * maxCache[i][j-1], matrix[i][j] * minCache[i][j-1]);\n                    minVal = Math.min(tempMin, minVal);\n                }\n                maxCache[i][j] = maxVal;\n                minCache[i][j] = minVal;\n            }\n        }\n        \n        return maxCache[maxCache.length - 1][maxCache[0].length - 1];\n    }",
+      "language": "java",
+      "description": ""
+    },
+    {
+      "id": 10,
+      "problemTitle": "Gray Code",
+      "problemStatement": "  Given two integers, write a function to determine whether or not their binary representations differ by a single bit",
+      "input": "[ [0, 1],[1, 2]]",
+      "output": "[true,false]",
+      "program": "   public static boolean gray_1(int a, int b) {\n        int x = a ^ b;\n        while (x > 0) {\n            if (x % 2 == 1 && x >> 1 > 0) {\n                return false;\n            }\n        }\n        return true;\n    }\n\n    public static boolean gray_2(int a, int b) {\n\t\tSystem.out.println(a^b);\n        int x = a ^ b;\n\t\tSystem.out.println(x+\" \"+(x-1));\n\t\tSystem.out.println(x & (x-1));\n        return (x & (x - 1)) == 0;\n    }",
+      "language": "java",
+      "description": ""
+    },
+    {
+      "id": 11,
+      "problemTitle": "Two Missing Numbers",
+      "problemStatement": "Given an unsorted array of numbers from 1 to N with two numbers missing returns, the two numbers are missing.",
+      "input": "[[1, 2, 4, 5],[3, 2, 5, 4],[4,3, 2, 1],[1, 3, 5],[2, 4, 5],[3, 1, 2]]",
+      "output": "[3,1,5,[2, 4],[1, 3],[4, 5]]",
+      "program": "import java.util.Arrays;\n    public static int oneMissing(int[] arr) {\n        int totalXor = 0;\n        int arrXor = 0;\n        for (int i = 1; i <= arr.length + 1; i++) totalXor ^= i;\n        for (int i : arr) arrXor ^= i;\n        return totalXor ^ arrXor;\n    }\n    public static int[] twoMissing(int[] arr) {\n        int size = arr.length + 2;\n        long totalSum = size * (size + 1) / 2;\n        long arrSum = 0;\n        for (int i : arr) arrSum += i;\n        int pivot = (int) ((totalSum - arrSum) / 2);\n        int totalLeftXor = 0;\n        int arrLeftXor = 0;\n        int totalRightXor = 0;\n        int arrRightXor = 0;\n        \n        for (int i = 1; i <= pivot; i++) totalLeftXor ^= i;\n        for (int i = pivot + 1; i <= size; i++) totalRightXor ^= i;\n        for (int i : arr) {\n            if (i <= pivot) arrLeftXor ^= i;\n            else arrRightXor ^= i;\n        }\n        \n        return new int[]{totalLeftXor ^ arrLeftXor, \n            totalRightXor ^ arrRightXor};\n    }",
+      "language": "java",
+      "description": ""
+    },
+    {
+      "id": 12,
+      "problemTitle": "Consecutive Array",
+      "problemStatement": "Given an unsorted array of numbers, find the length of the longest sequence of consecutive numbers in the array\n ",
+      "input": "[[1,2,3,4,5],[5,4,3,2,1],[1,2,4,5,6],[2,4,1,6,5]]",
+      "output": "[5,5,3,3]",
+      "program": "import java.util.HashSet;\n    public static int consecutive(int[] a) {\n        HashSet<Integer> values = new HashSet();\n        for (int i : a) {\n            values.add(i);\n        }\n        int maxLength = 0;\n        for (int i : values) {\n            if (values.contains(i - 1)) continue;\n            int length = 0;\n            while (values.contains(i++)) length++;\n            maxLength = Math.max(maxLength, length);\n        }\n        \n        return maxLength;\n    }",
+      "language": "java",
+      "description": ""
+    },
+    {
+      "id": 13,
+      "problemTitle": "Rotate bits",
+      "problemStatement": "Given a number, write a function to rotate the bits (ie circular shift)\n ",
+      "input": "[0xFFFF0000, 8],[0x13579BDF, 12],[0b10110011100011110000111110000000, 17]]",
+      "output": "[0x00FFFF00,0xBDF13579,0b00011111000000010110011100011110]",
+      "program": "    private static final int BITS_IN_INTEGER = 32;\n    public static int rotate(int x, int N) {\n        N = N % BITS_IN_INTEGER;\n        return (x >> N | x << (BITS_IN_INTEGER - N));\n    }\n    ",
+      "language": "java",
+      "description": ""
+    },
+    {
+      "id": 14,
+      "problemTitle": "Sum",
+      "problemStatement": "Given two integers, write a function to sum the numbers without using any arithmetic operators",
+      "input": "[[5, 10],[100, 200],[3, 2]]",
+      "output": "[15,300,5]",
+      "program": "    public static int sum(int a, int b) {\n        if (b == 0){\n            return a;\n        }\n        int partialSum = a ^ b;\n        int carry = (a & b) << 1;\n        return sum(partialSum, carry);\n    }",
+      "language": "java",
       "description": ""
     }
   ],
@@ -325,39 +493,48 @@
   "Webad": [
     {
       "id": 1,
-      "topic": "Anger-Managment",
-      "title": "Webinar",
-      "registerLink": "#",
-      "price": "$1.20",
-      "information": "<p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person.</p>",
-      "imageURL": "data:image/jpeg;base64,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"
+      "topic": "Changes In Labour Market Post Pandemic Covid 19 ",
+      "title": "Changes In Labour Market Post Pandemic Covid 19 ",
+      "registerLink": "https://www.instagram.com/p/CC5Jl9GAARo/?igshid=jq4v3mdqy7gm",
+      "price": "0",
+      "information": "Dear Learners ,\nGreetings from #Digisaksham* !\n\nThe present #COVID 19 has changed the #market #structure, a #new market is #growing rapidly with many new add-on. These new things are set as the #requirement of the new world. To set up your foot in the market, everyone need to be #updated in this #competitive world either in terms of knowledge or skills.\n\nJoin webinar on Changes In #Labour Market Post Pandemic Covid 19 \n Date : 22 July 2020 Time : 5:30- 6:30 pm\n\n Speaker \n Varun Krishna , an #HR officer at Gail India Pvt Ltd. He has a working #experience of 8 years ( 5 years in #Recruitment & #Talent #Acquisition, and 3 years in Training & Skill Development).\n\nThe participant should participate by clicking on  link in bio for*registration* : 👇🏻\n(@bit_sys) \n\nEach #participant who attends the #webinar will receive a #certificate of participation through E-mail.\nFollow for more\n@digisaksham \n@bit_sys\n\n#freewebinar #lifechanges  #learning #motivation💯 #placement #bit_sys #bisnessman\nhttps://www.instagram.com/p/CC5Jl9GAARo/?igshid=jq4v3mdqy7gm",
+      "imageURL": "assets/web1.jpg"
     },
     {
       "id": 2,
-      "topic": "Personality development",
-      "title": "Webinar",
-      "registerLink": "#",
-      "price": "Free",
-      "information": "<p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person.</p>",
-      "imageURL": "data:image/jpeg;base64,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"
+      "topic": "professional development webinar series",
+      "title": "professional development webinar series",
+      "registerLink": "professional development webinar series",
+      "price": "0",
+      "information": "Dear Learner,\nGreetings from #DIGISAKSHAM !!\n\nThe present #COVID 19 has changed the #market structure, a new market is growing rapidly with many new add-on. These new things are set as the #requirement of the new world. To set up your foot in the market, everyone need to be updated in this #competitive world either in terms of #knowledge or #skills.\n\nThe participant should participate by clicking on link in bio👇🏻\n@bit_sys\n\nEach participant who attends the #webinar will receive a #certificate of participation through E-mail.\nFollow for more\n@bit_sys\n@digisaksham \n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n#emotional #motivation💯\n#studygram #freewebinar #professional #development #learning #bit_sys\nhttps://www.instagram.com/p/CCl2c91lhYU/?igshid=jef2jn0293oj",
+      "imageURL": "assets/web2.jpg"
     },
     {
       "id": 3,
-      "topic": "Anger-Managment",
-      "title": "Webinar",
-      "registerLink": "#",
-      "price": "$2.30",
-      "information": "<p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person.</p>",
-      "imageURL": "data:image/jpeg;base64,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"
+      "topic": "FRENCH LANGUAGE",
+      "title": "Value and Need of the New World",
+      "registerLink": "https://www.instagram.com/p/CCdn2eNA0VX/?igshid=15ful20wkzyps",
+      "price": "99",
+      "information": "Dear Learners ,\nGreetings from DIGISAKSHAM !!\n\nThe present COVID 19 has changed the market structure, a new market is growing rapidly with many new add-on. These new things are set as the requirement of the new world. To set up your foot in the #market, everyone need to be updated in this competitive world either in terms of #knowledge or #skills.\n\nJoin #webinar on #FRENCH LANGUAGE: Value and Need of the New World\n\nDate: 12 July 2020  Time: 5:30-6:30 PM\n\n *Speaker Profile \n Sakshi Narayan is a qualified  Diploma holder in French Language. She has done MBA (Finance & HR) from Gautam Buddha University. She has completed B.Com (Hons) from #Lucknow University. Has 5 years of experience in teaching area. Currently, she us working as a #Manager in renowned educational institutions.\n\nThe participant should participate by clicking on link for registration in bio* 👇🏻\n@bit_sys\n\nEach participant who attends the webinar will receive a #certificate of participation through E-mail.\n\nFollow for more\n@bit_sys \n@digisaksham \n.\n.\n.\n.\n.\n.\n.\n#frenchbulldog #frenchie #frenchtoast #french #frenchiepuppy #learning #nri #foreigner #liveaboard #motivation💯 #webinar #knowledge #bit_sys #digisaksham\nhttps://www.instagram.com/p/CCdn2eNA0VX/?igshid=15ful20wkzyps",
+      "imageURL": "assets/web3.jpg"
     },
     {
       "id": 4,
-      "topic": "Personality development",
-      "title": "Webinar",
-      "registerLink": "#",
-      "price": "Free",
-      "information": "<p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person.</p>",
-      "imageURL": "data:image/jpeg;base64,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"
+      "topic": "future of technologies and startups",
+      "title": "Opportunity for young force",
+      "registerLink": "https://www.instagram.com/p/CCZ83fmAiLS/?igshid=vq0a279w6i1x",
+      "price": "0",
+      "information": "Dear Learners,\nGreeting from DIGISAKSHAM!!\n\nThe present Covid 19 crisis has created an atmosphere of negativity and fear in the minds of the multitudes. In these trying times, the best a person can do is to be hopeful for a bright future. However, hope does not come easy when everything around you is going haywire. The objective of this webinar is to create awareness of Future of Technologies & Startup and Opportunities for Young Work Force .\n\nJoin free webinar on \"Future of Technologies & Startup - Opportunities for Young Work Force \"\nDate: 11 July 2020  Time: 5:00 PM to 6:00 PM\n\nSpeakers Profile\nVivek Shukla is CEO of Nukkad-Shops and heading the operations since 2017. He was involved in various stages of Product development i.e., conceptualizing a Technology Product, Pre production, Production and deployment. He is also  responsible for establishing customer relationship and sustain the engagement. \n\nPrakhar Mittal is currently working as a Senior Consultant in Deloitte. He has total 11 years of experience out of which 4 years is international. He is a tenured Product Development Strategy Consultant with accomplishment of providing I2P, PPM, Innovation & PLM solutions for Health Care, Life Science & CPG Clients across USA, Germany, Canada & Australia. \n\nThe participants should participate by clicking on following *Link for registration in bio 👉 @bit_sys\n\nEach participant who attends the webinar will receive a certificate of participation through E-mail.\nFollow for more\n@bit_sys\n@digisaksham\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n.\n#freewebinar #placement #startupgrind #startup #startupbusiness #startups #startuplife #bit_sys #digisaksham #businesswoman #bit_sys #webinar #young #youngboy #youngforce\nhttps://www.instagram.com/p/CCZ83fmAiLS/?igshid=vq0a279w6i1x",
+      "imageURL": "assets/web4.jpg"
+    },
+    {
+      "id": 5,
+      "topic": "Harvest the riches using the Universal laws of Success",
+      "title": "Harvest the riches using the Universal laws of Success",
+      "registerLink": "https://www.instagram.com/p/CCGuTHlgoUs/?igshid=cy8dlqvqpzab",
+      "price": "0",
+      "information": "Dear Learners,\nGreeting from DIGISAKSHAM!!\n\nThe present Covid 19 crisis has created an atmosphere of negativity and fear in the minds of the multitudes. In these trying times, the best a person can do is to be hopeful for a bright future. However, hope does not come easy when everything around you is going haywire. The objective of this webinar is to instill that feeling of hope and abundance despite the given circumstances. Whatever the circumstances, one can take complete control of the situation and continue to enjoy a fulfilling life by gaining an insight into the Universal laws of success.\n\nJoin free webinar on \"Harvest the riches using the Universal laws of Success\" \nDate: 03 July 2020\nTime: 5:30 PM to 6:30 PM\n\nSpeaker Profile\nSaurabh Nagalia is a successful entrepreneur in the field of Real estate development. He tried his hand at various businesses before ultimately discovering his passion for creativity in building beautiful homes for people. He is an avid reader and is keenly interested in personal growth and development. He says that the ups and downs he faced in his life showed him a path to know more about the universal laws of success. His personal experiences with the law of Attraction paved the way to abundance of health, wealth and prosperity in his life. Amongst his friends and peers he is referred to as a person with strong positive vibes.\nOne of the biggest goals in his life is to share with others his knowledge on these laws, help them to believe in them and harness their power for greater success in all areas of their life.\n\nThe participants should participate by clicking on link which is in bio 👉 @bit_sys\n\nEach participant who attends the webinar will receive a certificate of participation through E-mail.\n\nFollow for more\n@bit_sys\n@digisaksham\n\nThanks & Regards\nTeam Digisaksham\n9318474548\n.\n.\n.\n.\n.\n\n..\n.\n.\n.\n.\n#freewebinar #lifechanges #brightlifers #success #successmindset #successquotes #successful #successdiaries #successtips #successcoach #certification #certificate #certificateofexcellenc #motivation #motivationalquotes  #motivational #motivation💯 #bit_sys #digisaksham\nhttps://www.instagram.com/p/CCGuTHlgoUs/?igshid=cy8dlqvqpzab",
+      "imageURL": "assets/web5.jpg"
     }
   ],
   "LoginStatus": [
