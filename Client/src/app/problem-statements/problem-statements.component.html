@@ -1,13 +1,13 @@
 <!-- *ngIf="!Ava" -->
-<div  style="color:black" *ngIf="!Ava">
-<table class="blueTable">
-  <thead>
+<div id="demoFont" style="color:black" *ngIf="!Ava">
+<table class="blueTable" id="demoFont" style="font-size: 20px;">
+  <thead  style="font-size: 20px;">
     <th>Problem Id</th>
     <th>Problem Name</th>
     <th></th>
   </thead>
   <tbody>
-      <tr *ngFor="let p of problems">
+      <tr *ngFor="let p of problems"  style="font-size: 200px;">
         <td>{{p.id}}</td>
         <td>{{p.problemTitle}}</td>      
        <td style="text-align: center;"><button class="myButton"(click)="setId(p.id)" >More</button></td>
