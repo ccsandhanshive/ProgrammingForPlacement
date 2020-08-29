@@ -32,9 +32,28 @@ getAlldata()
       // });
     }
   )
+  this.addProblemStatementService.getAllProblem().subscribe(
+    (data:Problem[]) =>{
+      this.allProblem1=data;
+      console.log(this.allProblem)
+      // this.allUsers.forEach(element => {
+      // console.log(element.firstname);
+        
+      // });
+    }
+  )
 }
 
 delete(id:Number){
+  console.log(id);
+  this.addProblemStatementService.deleteProblem(id).subscribe(
+    (data:Problem) =>{
+      this.getAlldata();
+      // console.log(this.allUsers)
+    }
+  )
+}
+delete_Problem(id:Number){
   console.log(id);
   this.problemservice.deleteProblem(id).subscribe(
     (data:Problem) =>{
